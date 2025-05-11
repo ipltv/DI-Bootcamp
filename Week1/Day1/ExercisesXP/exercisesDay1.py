@@ -42,3 +42,16 @@ if user_input == "Ilya":
 else:
     print(f"Hello {user_input}, you are not Ilya")
 #Exercise 9
+while True:
+    user_input = input("Enter your height:") #taking input height from the user
+    try:
+        user_input = int(user_input) #converting the input to an integer
+    except ValueError: print("You put something strange") #if the input is not an integer, continue to the next iteration
+    else:
+        if user_input > 145:
+            print("You are tall enough to ride.")
+            break
+        else:
+            print("You need to grow some more to ride.")
+            break
+#The End

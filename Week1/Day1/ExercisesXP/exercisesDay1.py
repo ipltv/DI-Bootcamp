@@ -36,3 +36,9 @@ while True:
             print("Odd")
             break
 #Exercise 8
+user_input = input("Enter your name:") #taking input name from the user
+if user_input == "Ilya":
+    print("Nice to meet you, Ilya")
+else:
+    print(f"Hello {user_input}, you are not Ilya")
+#Exercise 9

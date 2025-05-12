@@ -1,0 +1,12 @@
+URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week1/Day2/DailyChallenge/daily_challenge.py
+suggestions for improvement:
+- In Challenge 1, add input validation to ensure the user enters integers. The current `try-except` block handles some errors but could be more robust (e.g., checking for non-numeric input).
+- In Challenge 1,  a more descriptive variable name than `number` and `length` could improve readability (e.g., `base_number`, `list_length`).
+- In Challenge 2,  a more descriptive variable name than `userString` and `newString` would enhance readability (e.g., `input_string`, `processed_string`).
+- Add comments explaining the purpose of each section of code in both challenges for better understanding.
+Brief justification:
+- correctness: Both challenges correctly implement the core logic as described. Challenge 1 generates the correct list of multiples, handling a positive length. Challenge 2 effectively removes consecutive duplicate letters, producing the expected output in all examples.  The only minor correctness issue is the lack of comprehensive input validation in Challenge 1, which is addressed in the feedback.
+- readability: The code is generally easy to follow. However, more descriptive variable names and comments would significantly improve readability. The use of a list comprehension in Challenge 1 is efficient and readable. The loop in Challenge 2 is also clear and concise but could be enhanced with better variable names and comments.
+- performance: The algorithms used in both challenges are efficient.  Challenge 1 uses a list comprehension which is generally very efficient.  Challenge 2 iterates through the string once which is also optimal. There are no unnecessary computations or inefficient data structures.
+- security: The code doesn't have any apparent security vulnerabilities. The input validation (though needing improvement in Challenge 1) prevents obvious attacks, such as injection through user input.  No external resources are accessed, reducing potential risks.
+

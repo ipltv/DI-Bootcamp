@@ -28,4 +28,23 @@ while True:
 #Exercise 3
 print("--------------Exercise 3--------------")
 
-    
+i = 1
+while i <= 10:
+    print(i)
+    i += 1
+
+#Lesson exercise
+
+#1
+names = []
+names.extend(["Sheldon", "Penny", "Leonard", "Howard"])
+print(names)
+
+#2
+list1 = [5, 10, 15, 20, 25, 50, 20]
+print("The list is: ", list1)
+if 20 in list1:
+    index_of_20 = list1.index(20)
+    list1[index_of_20] = 200
+print("The modified list is:", list1)
+

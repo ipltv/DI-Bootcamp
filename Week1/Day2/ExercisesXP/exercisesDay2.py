@@ -59,7 +59,7 @@ print("Number of Apples in the basket:", apples_count)
 # Empty the list.
 basket.clear()
 # Print the final state of the list.
-print("Final state of the basket:", basket)
+print("Final state of the list:", basket)
 
 #Exercise 4
 print("--------------Exercise 4--------------")

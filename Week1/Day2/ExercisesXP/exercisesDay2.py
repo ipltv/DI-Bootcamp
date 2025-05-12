@@ -172,8 +172,10 @@ fullTicketCost = 15
 
 price = 0
 input_age = 0
-while input_age != "quit":
+while True:
     input_age = input("Enter your age (enter quit for the stop): ")
+    if input_age == "quit":
+        break
     try:
         input_age = int(input_age)
         if input_age < 0:
@@ -192,4 +194,63 @@ while input_age != "quit":
             print(f"This ticket costs: {fullTicketCost}. Go to the next.")
 
 print("Your total price is $", price)
+
+#Exercise 9 Bonus
+print("--------------Exercise 9 Bonus--------------")
+
+input_age = 0
+input_name = ""
+name_list = []
+price = 0
+fullTicketCost = 20
+while True:
+    input_name = input("Enter your name (enter quit for the stop): ")
+    if input_name == "quit":
+        break
+    input_age = input("Enter your age (enter quit for the stop): ")
+    if input_age == "quit":
+        break
+    try:
+        input_age = int(input_age)
+        if input_age < 0:
+            raise ValueError("Age cannot be negative.")
+        if input_name == "":
+            raise ValueError("Name cannot be empty.")
+    except ValueError:
+        print("You put something strange. Try it one more time.")
+    else:
+        if 16 <= input_age <= 21:
+            name_list.append(input_name)
+            print(f"Your name is {input_name}. You are in the list.")
+            price += fullTicketCost
+            print(f"This ticket costs: {fullTicketCost}. Go to the next.")
+        else:
+            print(f"Your name is {input_name}. You are NOT allowed to see a restricted movie.")
+
+print("The final list of attendees: ", name_list)
+print("Total price is $", price)
+
+#Exercise 10
+print("--------------Exercise 10 Bonus--------------")
+
+# Using the list:
+# sandwich_orders = ["Tuna", "Pastrami", "Avocado", "Pastrami", "Egg", "Chicken", "Pastrami"]
+# The deli has run out of “Pastrami”, so use a loop to remove all instances of “Pastrami” from the list.
+# Prepare each sandwich, one by one, and move them to a list called finished_sandwiches.
+# Print a message for each sandwich made, such as: "I made your Tuna sandwich."
+# Print the final list of all finished sandwiches.
+
+sandwich_orders = ["Tuna", "Pastrami", "Avocado", "Pastrami", "Egg", "Chicken", "Pastrami"]
+
+for i in range(sandwich_orders.count("Pastrami")):
+    sandwich_orders.remove("Pastrami")
+
+finished_sandwiches = []
+while len(sandwich_orders) > 0:
+    current_sandwich = sandwich_orders.pop()
+    finished_sandwiches.append(current_sandwich)
+    print(f"I made your {current_sandwich} sandwich.")
+    
+print("The final list of all finished sandwiches", finished_sandwiches)
+
 #The End

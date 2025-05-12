@@ -1,0 +1,12 @@
+URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week1/Day1/ExercisesXP/exercisesDay1.py
+suggestions for improvement:
+- In Exercise 3, the comparison between a string and an integer ('3' > 3) should result in a TypeError, but the code incorrectly predicts 'True'.  It should explicitly show the error type.
+- In Exercise 7 and 9, improve error handling.  Instead of just printing an error message and continuing, consider providing more user-friendly instructions on what constitutes valid input.
+- Add comments to explain the purpose of each code section, improving overall understanding.
+- Exercise 8 could benefit from a more creative and humorous message for the case where the user has the same name, thereby fully adhering to the instructions.
+Brief justification:
+- correctness: The code correctly implements most exercises.  Exercise 1 uses a concise method for printing. Exercise 2 accurately calculates the mathematical expression. Exercises 4, 5, and 6 are perfectly implemented. Exercises 7 and 9 handle user input and conditional logic correctly. However, Exercise 3 incorrectly predicts the outcome of comparing a string to an integer, it should return TypeError.  Exercise 8 fulfills the requirements but lacks creativity in its response.
+- readability: The code is generally readable, but adding comments to explain complex logic and the purpose of variables would significantly improve readability. The use of f-strings in Exercises 4 and 5 enhances readability.
+- performance: The code is efficient. It uses built-in functions effectively and avoids unnecessary calculations. The use of loops in exercises 7 and 9 is appropriate for handling user input, and the `break` statement prevents unnecessary iterations. The only performance concern is the repetitive printing in Exercise 1, but it's insignificant in this case.
+- security: The code doesn't have any obvious security vulnerabilities.  It doesn't interact with external systems or handle sensitive data, so there are no risks related to data breaches or malicious code execution.
+

@@ -1,154 +1,117 @@
 import random
-# #Exercise Exercise 1: Concatenate lists
-# print("--------------Exercise 1--------------")
+#Exercise 1: Formula
+print("--------------Exercise 1--------------")
+# Write a program that calculates and prints a value according to this given formula:
+# Q = Square root of [(2 * C * D)/H]
+# Following are the fixed values of C and H:
+# C is 50.
+# H is 30.
+# Ask the user for a comma-separated string of numbers, use each number from the user as D in the formula and return all the results
+# For example, if the user inputs: 100,150,180
+# The output should be:
+# 18,22,24
 
-# #Write code that concatenates two lists together without using the + sign.
-# names = ["Alice", "Bob", "Charlie"]
-# surnames = ["Smith", "Johnson", "Williams"]
+C = 50
+H = 30
+D = [int(i) for i in input("Enter comma-separated numbers: ").split(",")]
 
-# #Concatenate the two lists using a loop
-# for surname in surnames:
-#     names.append(surname)
-# print(names)
+for i in D:
+    print(2*C*i/H, end=",")
+print()
 
-# #Exercise 2: Range of numbers
-# print("--------------Exercise 2--------------")
+#Exercise 2 : List of integers
+print("--------------Exercise 2--------------")
+# Store the list of numbers in a variable.
+# Print the following information:
+# a. The list of numbers – printed in a single line
+# b. The list of numbers – sorted in descending order (largest to smallest)
+# c. The sum of all the numbers
+# A list containing the first and the last numbers.
+# A list of all the numbers greater than 50.
+# A list of all the numbers smaller than 10.
+# A list of all the numbers squared – eg. for [1, 2, 3] you would print “1 4 9”.
+# The numbers without any duplicates – also print how many numbers are in the new list.
+# The average of all the numbers.
+# The largest number.
+# 10.The smallest number.
+# 11.Bonus: Find the sum, average, largest and smallest number without using built in functions.
+# 12.Bonus: Instead of using pre-defined lists of numbers, ask the user for 10 numbers between -100 and 100. Ask the user for an integer between -100 and 100 – repeat this question 10 times. Each number should be added into a variable that you created earlier.
+# 13.Bonus: Instead of asking the user for 10 integers, generate 10 random integers yourself. Make sure that these random integers are between -100 and 100.
+# 14.Bonus: Instead of always generating 10 integers, let the amount of integers also be random! Generate a random positive integer no smaller than 50.
+# 15.Bonus: Will the code work when the number of random numbers is not equal to 10?
 
-# #Create a loop that goes from 1500 to 2500 and prints all multiples of 5 and 7.
+number_of_integers = random.randint(1, 50)
+print("Number of integers:", number_of_integers)
+integers = []
+for i in range(number_of_integers):
+    integers.append(random.randint(-100, 100))
 
-# first_number = 1500
+print("List of numbers:", *integers, sep=" ")
+print("Sorted list of numbers:", *sorted(integers, reverse=True), sep=" ")
+print("Sum of all numbers:", sum(integers))
+print("First and last numbers:", [integers[0], integers[-1]])
+print("Numbers greater than 50:", [i for i in integers if i > 50], sep=" ")
+print("Numbers smaller than 10:", [i for i in integers if i < 10], sep=" ")
+print("Numbers squared:", [i**2 for i in integers], sep=" ")
+without_duplicates = list(set(integers))
+print("Numbers without duplicates:", without_duplicates, "Count:", len(without_duplicates))
+print("Average of all numbers:", sum(integers)/len(integers))
+print("Largest number:", max(integers))
+print("Smallest number:", min(integers))
+# Bonus: Find the sum, average, largest and smallest number without using built in functions.
+sum = integers[0]
+min = integers[0]
+max = integers[0]
 
-# if first_number % 5 != 0 or first_number % 7 != 0:
-#     first_number = first_number + (35 - (first_number % 35))
+for i in integers:
+    sum += i
+    if i < min:
+        min = i
+    if i > max:
+        max = i
+print("Sum:", sum, "Average:", sum/len(integers), "Largest:", max, "Smallest:", min)
 
-# for i in range(first_number, 2501, 35):
-#     print(i, end=" ")
-# print()
+#Exercise 3: Working on a paragraph
+print("--------------Exercise 3--------------")
 
-# #Alternative solution using a loop
-# # for i in range(1500, 2501):
-# #     if i % 5 == 0 and i % 7 == 0:
-# #         print(i, end=" ")
-# # print()
+# Find an interesting paragraph of text online. (Please keep it appropriate to the social context of our class.)
+# Paste it to your code, and store it in a variable.
+# Let’s analyze the paragraph. Print out a nicely formatted message saying:
+# How many characters it contains (this one is easy…).
+# How many sentences it contains.
+# How many words it contains.
+# How many unique words it contains.
+# Bonus: How many non-whitespace characters it contains.
+# Bonus: The average amount of words per sentence in the paragraph.
+# Bonus: the amount of non-unique words in the paragraph.
 
-# #Exercise 3: Check the index
-# print("--------------Exercise 3--------------")
+paragraph = '''Cats are curious, graceful creatures known for their independence and charm. 
+            They love to nap in warm spots and often show affection in quiet, subtle ways. With their playful nature and gentle purring, they bring comfort and joy to many homes. 
+            Whether chasing shadows or lounging in a sunbeam, cats know how to live well.'''
+            
+print("Number of characters:", len(paragraph)) 
+print("Number of sentences:", paragraph.count(".") + paragraph.count("?") + paragraph.count("!"))
+print("Number of words:", len(paragraph.split()))
+print("Number of unique words:", len(set(paragraph.split())))
+print("Number of non-whitespace characters:", len(paragraph.replace(" ", "").replace("\n", "")))
+print("Average amount of words per sentence:", len(paragraph.split()) / (paragraph.count(".") + paragraph.count("?") + paragraph.count("!")))
+print("Number of non-unique words:", len(paragraph.split()) - len(set(paragraph.split())))
 
-# # Using this variable
-# # names = ['Samus', 'Cortana', 'V', 'Link', 'Mario', 'Cortana', 'Samus']
-# # Ask a user for their name, if their name is in the names list print out the index of the first occurence of the name.
-# # Example: if input is 'Cortana' we should be printing the index 1
+#Exercise 4 : Frequency Of The Words
+print("--------------Exercise 4--------------")
 
-# names = ['Samus', 'Cortana', 'V', 'Link', 'Mario', 'Cortana', 'Samus']
+# Write a program that prints the frequency of the words from the input.
+# The input consists of a string of words separated by spaces. The output should be a dictionary where the keys are the words and the values are the frequency of each word in the input.
+# For example, if the input is "hello world hello", the output should be {"hello": 2, "world": 1}.
+#
+# The program should be case-insensitive, so "Hello" and "hello" should be counted as the same word.
+text = input("Enter a string of words: ").lower()
+words = text.split()
+word_count = {}
 
-# user_name = input("Enter your name: ")
-# if user_name in names:
-#     index = names.index(user_name)
-#     print(f"Your name is at index {index}.")
-# else:
-#     print("Your name is not in the list. Go home!")
-    
-# #Exercise 4: Greatest Number
-# print("--------------Exercise 4--------------")
-
-# #Ask the user for 3 numbers and print the greatest number.
-
-# for i in range(3):
-#     number = int(input(f"Enter number #{i}: "))
-#     if i == 0:
-#         greatest_number = number
-#     elif number > greatest_number:
-#         greatest_number = number
-# print(f"The greatest number is {greatest_number}.")
-
-# #Exercise 5: The Alphabet
-# print("--------------Exercise 5--------------")
-
-# # Create a string of all the letters in the alphabet
-# # Loop over each letter and print a message that contains the letter and whether its a vowel or a consonant.
-
-# alphabet = "abcdefghijklmnopqrstuvwxyz"
-# vowels = "aeiou"
-# for letter in alphabet:
-#     if letter in vowels:
-#         print(f"{letter} is a vowel.")
-#     else:
-#         print(f"{letter} is a consonant.")
-
-# #Exercise 6: Words and letters
-# print("--------------Exercise 6--------------")
-
-# # Ask a user for 7 words, store them in a list named words.
-# # Ask the user for a single character, store it in a variable called letter.
-# # Loop through the words list and print the index of the first appearence of the letter variable in each word of the list.
-# # If the letter doesn’t exist in one of the words, print a friendly message with the word and the letter.
-
-# print("Enter 7 words:")
-# words = [input(f"Word #{i+1}: ") for i in range(7)]
-# letter = input("Enter a letter for search: ")
-
-# for word in words:
-#     if letter in word:
-#         index = word.index(letter)
-#         print(f"The letter '{letter}' is at index {index} in the word '{word}'.")
-#     else:
-#         print(f"The letter '{letter}' is not found in the word '{word}' :).")
-
-# #Exercise 7: Min, Max, Sum
-# print("--------------Exercise 7--------------")
-
-# # Instructions
-# # Create a list of numbers from one to one million and then use min() and max() to make sure your list actually starts at one and ends at one million. Use the sum() function to see how quickly Python can add a million numbers.
-
-# million_numbers = list(range(1, 1000001))
-
-# print(f"Minimum number: {min(million_numbers)}")
-# print(f"Maximum number: {max(million_numbers)}")
-# print(f"Sum of numbers: {sum(million_numbers)}")
-
-# #Exercise 8 : List and Tuple
-# print("--------------Exercise 8--------------")
-
-# # Write a program which accepts a sequence of comma-separated numbers. Generate a list and a tuple which contain every number.
-# # Suppose the following input is supplied to the program: 34,67,55,33,12,98
-
-# list_input = input("Enter a sequence of comma-separated numbers: ")
-# numbers_list = list_input.split(",")
-# numbers_tuple = tuple(numbers_list)
-
-# print("List:", numbers_list)
-# print("Tuple:", numbers_tuple)
-
-#Exercise 9 : Random number
-print("--------------Exercise 9--------------")
-
-# Ask the user to input a number from 1 to 9 (including).
-# Get a random number between 1 and 9. Hint: random module.
-# If the user guesses the correct number print a message that says Winner.
-# If the user guesses the wrong number print a message that says better luck next time.
-# Bonus: use a loop that allows the user to keep guessing until they want to quit.
-# Bonus 2: on exiting the loop tally up and display total games won and lost.
-
-won = 0
-lost = 0
-while True:
-    try: 
-        user_number = input("Enter a number from 1 to 9 (or quit to exit): ")
-        if user_number == "quit":
-            break
-        user_number = int(user_number)
-        if user_number < 1 or user_number > 9:
-            print("Please enter a number from 1 to 9.")
-            continue
-    except ValueError:
-        print("Invalid input. Please enter a number from 1 to 9 or 'quit' to exit.")
-        continue      
-    random_number = random.randint(1, 9)
-    if user_number == random_number:
-        print("Winner!")
-        won += 1
+for word in words:
+    if word in word_count:
+        word_count[word] += 1
     else:
-        print(f"The correct number was {random_number}.")
-        lost += 1
-print(f"Total games won: {won}, Total games lost: {lost}")
-#The End
+        word_count[word] = 1
+print("Word frequency:", word_count)

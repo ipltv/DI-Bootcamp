@@ -1,134 +1,47 @@
-#Exercise 1: Converting Lists into Dictionaries
-print("--------------Exercise 1--------------")
+#Daily Challenge: Dictionaries
+#Create a dictionary that stores the indices (number of the position) of each letter in a word provided by the user(input()).
 
-# You are given two lists. 
-# Convert them into a dictionary where the first list contains the keys and the second list contains the corresponding values.
-keys = ['Ten', 'Twenty', 'Thirty']
-values = [10, 20, 30]
+#Challenge 1: Letter Index Dictionary
+print("--------------Challenge 1--------------")
 
-min_list_length = min(len(keys), len(values))
-result_dict = {keys[i]: values[i] for i in range(min_list_length)}
-print(result_dict)  # Output: {'Ten': 10, 'Twenty': 20, 'Thirty': 30}
+userInput = input("Enter a word: ")
+letterIndices = {}
+for i in range(len(userInput)):
+    letter = userInput[i]
+    if letter not in letterIndices:
+        letterIndices[letter] = []
+    letterIndices[letter].append(i)
+print(letterIndices)
 
-#Exercise 2: Cinemax #2
-print("--------------Exercise 2--------------")
+#Challenge 2: Affordable Items
+print("--------------Challenge 2--------------")
 
-# Write a program that calculates the total cost of movie tickets for a family based on their ages.
+#Create a program that prints a list of items that can be purchased with a given amount of money.
+# You will be provided with a dictionary (items_purchase) where the keys are the item names and the values are their prices (as strings with a dollar sign).
+# You will also be given a string (wallet) representing the amount of money you have.
 
-# Family members’ ages are stored in a dictionary.
-# The ticket pricing rules are as follows:
-# Under 3 years old: Free
-# 3 to 12 years old: $10
-# Over 12 years old: $15
-# Loop through the family dictionary to calculate the total cost.
-# Print the ticket price for each family member.
-# Print the total cost at the end.
-# Allow the user to input family members’ names and ages, then calculate the total ticket cost.
+# items_purchase = {"Water": "$1", "Bread": "$3", "TV": "$1,000", "Fertilizer": "$20"}
+# wallet = "$300"
 
-# family = {"rick": 43, 'beth': 13, 'morty': 5, 'summer': 8}
-family = {}
+# items_purchase = {"Apple": "$4", "Honey": "$3", "Fan": "$14", "Bananas": "$4", "Pan": "$100", "Spoon": "$2"}
+# wallet = "$100"
 
-#Input section
-while True:
-    try:
-        family_member_name = input("Enter family member name (or 'done' to finish): ").replace(" ", "")
-        if family_member_name.lower() == 'done':
-            break
-        family_member_age = int(input(f"Enter {family_member_name}'s age: "))
-        if family_member_age < 0:
-            exception = ValueError("Age cannot be negative.")
-            raise exception
-        family[family_member_name] = family_member_age
-    except ValueError as e:
-        print("Invalid input. Please enter a valid age. Original error:", e)
-        continue
-    else:
-        family[family_member_name] = family_member_age
+items_purchase = {"Phone": "$999", "Speakers": "$300", "Laptop": "$5,000", "PC": "$1200"}
+wallet = "$1"
 
-#Calculation section
-total_cost = 0
-for name, age in family.items():
-    currentMemberCost = 0
-    if age < 3:
-        currentMemberCost = 0
-    elif 3 <= age <= 12:
-        currentMemberCost = 10
-    else:
-        currentMemberCost = 15
-    print(f"{name} is {age} years old and the ticket cost is ${currentMemberCost}")
-    total_cost += currentMemberCost
+# Convert wallet to an integer by removing the dollar sign and commas
+wallet = int(wallet.replace('$','').replace(',',''))  # Remove the dollar sign
+items_purchase = {item : int(price.replace('$','').replace(',','')) for item, price in items_purchase.items()}
 
-print(f"Total cost of movie tickets: ${total_cost}")  # Output: Total cost of movie tickets: $50
+affordable_items = []
+for item, price in items_purchase.items(): #loop through the dictionary. 
+    if price <= wallet: #If price is less than or equal to wallet, append the item to the affordable_items list.
+        affordable_items.append(item)
 
-#Exercise 3: Zara
-print("--------------Exercise 3--------------")
-
-#Create and manipulate a dictionary that contains information about the Zara brand.
-# Create a dictionary called brand with the provided data.
-# Modify and access the dictionary as follows:
-# Change the value of number_stores to 2.
-# Print a sentence describing Zara’s clients using the type_of_clothes key.
-# Add a new key country_creation with the value Spain.
-# Check if international_competitors exists and, if so, add “Desigual” to the list.
-# Delete the creation_date key.
-# Print the last item in international_competitors.
-# Print the major colors in the US.
-# Print the number of keys in the dictionary.
-# Print all keys of the dictionary.
-# Bonus. Create another dictionary called more_on_zara with creation_date and number_stores. Merge this dictionary with the original brand dictionary and print the result.
-
-brand = {
-    "name": "Zara",
-    "creation_date": 1975,
-    "creator_name": "Amancio Ortega Gaona",
-    "type_of_clothes": ["men", 'women', 'children', 'home'],
-    "international_competitors": ['Gap', 'H&M', 'Benetton'],
-    "number_stores": 7000,
-    "major_color": {
-        'France': 'blue', 
-        'Spain': 'red', 
-        'US': ['pink', 'green']
-    }
-}
-
-brand["number_stores"] = 2
-print(f"Zara's clients are using {brand['type_of_clothes']} type of clothes.")
-brand["country_creation"] = "Spain"
-print("Added creation country to the dictionary: ", brand["country_creation"])
-if "international_competitors" in brand:
-    brand["international_competitors"].append("Desigual")
-    print("Added Desigual to international competitors: ", brand["international_competitors"])
-brand.pop("creation_date", None)
-print("Deleted creation date from the dictionary.")
-print("Last item in international competitors: ", brand["international_competitors"][-1])
-print("Major colors in the US: ", brand["major_color"]["US"])
-print("Number of keys in the dictionary: ", len(brand))
-print("All keys in the dictionary: ", brand.keys())
-
-#Bonus: Merge the two dictionaries
-more_on_zara = {
-    "creation_date": 1976,
-    "number_stores": 7001
-}
-print("More on Zara: ", more_on_zara)
-
-brand.update(more_on_zara)
-print("Merged dictionary: ", brand)
-
-#Exercise 4: Disney Characters
-print("--------------Exercise 4--------------")
-#You are given a list of Disney characters. Create three dictionaries based on different patterns as shown below:
-
-users = ["Mickey", "Minnie", "Donald", "Ariel", "Pluto"]
-
-#Create a dictionary that maps characters to their indices:
-user_dict = {user: index for index, user in enumerate(users)}
-print("Dictionary mapping characters to their indices: ", user_dict)
-
-#Create a dictionary that maps indices to characters:
-indicas_dict = {index: user for index, user in enumerate(users)}
-print("Dictionary mapping indices to characters: ", indicas_dict)
-
-#Create a dictionary where characters are sorted alphabetically and mapped to their indices:
-alphabetical_dict = {user: index for index, user in enumerate(sorted(users))}
-print("Dictionary mapping characters to their indices in alphabetical order: ", alphabetical_dict)
+#Check if there is any affordable item. If there is, print the sorted list of affordable items. If not, print "Nothing".
+if len(affordable_items) > 0:
+    print(sorted(affordable_items))
+else:
+    print("Nothing")
+    
+#The end.

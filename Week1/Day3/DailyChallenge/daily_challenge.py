@@ -1,16 +1,16 @@
 #Daily Challenge: Dictionaries
-#Create a dictionary that stores the indices (number of the position) of each letter in a word provided by the user(input()).
 
 #Challenge 1: Letter Index Dictionary
 print("--------------Challenge 1--------------")
 
+#Create a dictionary that stores the indices (number of the position) of each letter in a word provided by the user(input()).
 userInput = input("Enter a word: ")
 letterIndices = {}
-for i in range(len(userInput)):
-    letter = userInput[i]
-    if letter not in letterIndices:
-        letterIndices[letter] = []
-    letterIndices[letter].append(i)
+for i in range(len(userInput)): #Loop through the userInput string and get the index of each letter.
+    letter = userInput[i] #Get the letter at index i and use it as a key in the result dictionary.
+    if letter not in letterIndices: #If the letter is not in the result dictionary, create empty list to store indices.
+        letterIndices[letter] = [] 
+    letterIndices[letter].append(i) #Append the index to the list of indices for each letter.
 print(letterIndices)
 
 #Challenge 2: Affordable Items

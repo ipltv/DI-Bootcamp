@@ -43,5 +43,4 @@ if len(affordable_items) > 0:
     print(sorted(affordable_items))
 else:
     print("Nothing")
-    
 #The end.

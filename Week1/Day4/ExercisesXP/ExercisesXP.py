@@ -39,7 +39,7 @@ def gueesTheNumber(value):
     if random.randint(1, 100) == value:
         print("Success!")
     else:
-        print(f"Fail! Your number: {50}, Random number: {randomNumber}")
+        print(f"Fail! Your number: {value}, Random number: {randomNumber}")
     
 while True:
     try:

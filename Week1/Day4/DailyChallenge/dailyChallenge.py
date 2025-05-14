@@ -35,11 +35,11 @@ flagSymbols = False #flag for marking the beginning of non-letter sequences
 for j in range(len(matrix[0])):
     for i in range(len(matrix)):
         if str.isalpha(matrix[i][j]): #if symbol is a letter
-            if flag and resultString: #if before there was a sequences of non-letter chars and result string isn't empty (for the case when non-letter is in the beginning) 
+            if flagSymbols and resultString: #if before there was a sequences of non-letter chars and result string isn't empty (for the case when non-letter is in the beginning) 
                 resultString += " "
             resultString += matrix[i][j]
-            flag = False
+            flagSymbols = False
         else:
-            flag = True #stat non-letter
+            flagSymbols = True #stat non-letter
 # Step 5: Print the decoded message     
 print(resultString)

@@ -22,3 +22,11 @@ def party_planner(*args, **kwargs):
 party_planner("Apples", "Oranges", "Beer", date="01/01/2026")
 party_planner("Apples", "Oranges", "Beer")
 party_planner(date="01/01/2026")
+
+x = 5
+
+y = x
+
+x = 10
+
+print(y)

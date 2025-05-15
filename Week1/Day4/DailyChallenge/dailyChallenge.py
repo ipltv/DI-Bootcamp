@@ -41,5 +41,5 @@ for j in range(len(matrix[0])):
             flagSymbols = False
         else:
             flagSymbols = True #stat non-letter
-# Step 5: Print the decoded message     
+# Step 5: Print the decoded message
 print(resultString)

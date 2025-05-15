@@ -1,0 +1,13 @@
+URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week1/Day2/ExercisesXP/exercisesDay2.py
+suggestions for improvement:
+- In Exercise 1, while the code correctly uses set operations,  it could be slightly improved by using more descriptive variable names (e.g., instead of `tumple_of_integers`, use `my_favorite_numbers_tuple`).
+- In Exercise 2, the code correctly demonstrates the immutability of tuples by showing that the `+=` operator creates a new tuple rather than modifying the original. However, a more explicit explanation in a comment would enhance readability.
+- In Exercise 8, the pizza pricing calculation has a minor flaw: It should be `base_price + len(toppings_list) * add_topping_price` to correctly account for all toppings.
+- Exercise 9 bonus could be more robust by using a loop instead of repetitive code to calculate the cost based on age.
+- In Exercise 10, the code works correctly but could be more efficient by iterating directly over a copy of the list to prevent issues with modifying a list while iterating over it.
+Brief justification:
+- correctness: The code correctly implements the solutions for all exercises, with minor exceptions noted in feedback.  It addresses the key Python topics (sets, tuples, lists, loops, conditionals, input/output) mentioned in the chapter content and follows the instructions provided for each exercise. The minor inaccuracies are mostly in edge cases or in how to calculate a total price, not in logic or fundamental understanding.
+- readability: The code is generally well-structured and easy to follow. However, some variable names could be more descriptive, and comments could be added to further clarify the purpose of certain code sections, especially in exercises 2 and 10, where the approach is not immediately obvious from just reading the code.
+- performance: The code's performance is good for the given tasks.  No significant performance bottlenecks are observed.  The use of efficient data structures (sets for Exercise 1) and concise loop structures contributes to good performance.
+- security: The code doesn't have any obvious security vulnerabilities.  It appropriately handles user input in some exercises, preventing crashes due to invalid input type (Exercise 9) or preventing unexpected modification of the list while iterating over it in Exercise 10. Input validation is good enough for this task
+

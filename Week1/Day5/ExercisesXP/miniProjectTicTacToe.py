@@ -90,5 +90,5 @@ def play():
     else:
         print("DRAW!")
 
-#call the game function  
+#call the game function 
 play()

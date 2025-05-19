@@ -1,0 +1,10 @@
+URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week1/Day5/DailyChallenge/dailyChallenge.py
+suggestions for improvement:
+- In Challenge 1, the code directly uses the `.sort()` method which is perfectly acceptable and efficient, it does not explicitly follow the suggested steps of splitting the string, sorting the list and joining it back.  Adding those steps with comments would make it even clearer and more closely aligned with the instructions. 
+- Challenge 2's `longest_word` function is efficient but doesn't handle punctuation as described in the problem statement. It splits on whitespace, omitting punctuation within words.  The function should split more intelligently to handle words with punctuation correctly.
+Brief justification:
+- correctness: Challenge 1 correctly sorts and prints the comma-separated words.  It deviates slightly from the step-by-step instructions but achieves the same result. Challenge 2's function mostly works, but has a flaw in its word splitting that fails to fulfill the requirement of including punctuation as part of the word.  Therefore it is not completely correct.
+- readability: The code is well-structured and easy to follow for both challenges.  The use of f-strings in Challenge 1 enhances readability. However, adding comments in Challenge 1 that explicitly follow the steps as outlined in the instructions would improve readability further.
+- performance: Both functions are efficient.  The use of Python's built-in sorting and `max` functions with `key=len` is optimal. There are no unnecessary iterations or redundant operations.
+- security: There are no security concerns in this code. It only deals with user input and string manipulation; no external resources or sensitive data are involved.
+

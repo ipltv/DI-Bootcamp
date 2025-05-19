@@ -1,0 +1,13 @@
+URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week1/Day3/ExercisesXP/exercisesDay3.py
+suggestions for improvement:
+- In Exercise 2, the input validation could be improved by using a more robust method to handle non-numeric input.  A `while` loop with error handling is good, but a more concise approach might exist using regular expressions or other input validation techniques.
+- In Exercise 3, the `major_color` dictionary within the `brand` dictionary is inconsistently structured (France and Spain have single string values, while US has a list).  Maintain consistency across all entries for better readability and maintainability. This makes accessing values like `brand['major_color']['US']` require additional handling based on the different data types.
+- Exercise 3 could benefit from separating the data creation and manipulation stages. Create the dictionary first, then perform the modifications step-by-step. This improves clarity and makes the code easier to follow.
+- Add comments to explain the purpose of each step, especially in more complex exercises (like exercise 2 and 3).
+- In Exercise 4, consider using `dict.fromkeys()` for the first two dictionaries if the ordering of the list `users` matters, to avoid issues if that list ever changes.
+Brief justification:
+- correctness: The code correctly implements all four exercises. Exercise 1 uses dictionary comprehension efficiently. Exercise 2 successfully prompts the user for input and calculates the total cost. Exercise 3 manipulates the dictionary correctly, including merging with `more_on_zara`. Exercise 4 creates the three dictionaries according to specifications, however the structure of `users` may change, and the use of a loop (or `enumerate`) may not be necessary if ordering is not important. The minor inconsistencies noted in the feedback section do not significantly detract from correctness.
+- readability: The code is generally readable, but some improvements would enhance clarity.  The input section in Exercise 2 could be streamlined, and the data structures in Exercise 3 should be consistent.  Adding comments would improve readability.
+- performance: The code's performance is excellent.  All operations are efficient and well-optimized for the tasks at hand. There are no significant performance bottlenecks.
+- security: The code doesn't have any security vulnerabilities. The input validation in Exercise 2 partially mitigates potential issues with user input, but could be made more robust to prevent other types of attacks such as SQL injection (unlikely here, but good practice to consider). It handles potential `ValueError` exceptions gracefully.
+

@@ -48,7 +48,7 @@ class Pagination():
         return self
     
     def __str__(self):
-        '''Return string with items on the current page divided by new line'''
+        '''Return a string with items on the current page divided by new line'''
         return "\n".join(self.get_visible_items())
         
 alphabetList = list("abcdefghijklmnopqrstuvwxyz")

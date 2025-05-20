@@ -4,23 +4,21 @@ import turtle
 
 class Circle:
     """A class representing a geometric circle."""
-    def __init__(self, radius=None, diameter=None):
+    def __init__(self, radius=None):
         """
-        Initialize a Circle with either radius or diameter.
-        Raises ValueError if both or neither are provided.
+        Initialize a Circle with radius.
+        Raises ValueError if None provided.
         """
-        if radius is not None and diameter is not None:
-            raise ValueError("You should use only one parameter for Circle: radius or diamter")
-        elif radius is not None:
+        if radius is not None:
             self.radius = radius
-        elif diameter is not None:
-            self.radius = diameter / 2
         else:
-            raise ValueError("You should use only one parameter for Circle: radius or diamter")
+            raise ValueError("Radius cannot be None")
         
     @classmethod
     def from_diameter(cls, diameter):
         """Create a Circle instance using the diameter."""
+        if not isinstance(diameter, (int,float)) or diameter <= 0:
+            raise ValueError("Radius must be a positive number.")
         return cls(diameter/2)
     
     @property
@@ -74,7 +72,7 @@ class Circle:
     
     
 c1 = Circle(radius=50)
-c2 = Circle(diameter=200)#100
+c2 = Circle.from_diameter(200)#100
 c3 = Circle(radius=150)
 c4 = Circle.from_diameter(400)
 

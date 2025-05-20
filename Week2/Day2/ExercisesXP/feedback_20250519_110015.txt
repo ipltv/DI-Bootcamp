@@ -1,0 +1,18 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week2/Day2/ExercisesXP/ExercisesXP.py
+suggestions for improvement:
+- In Exercise 1, add more specific instructions for creating the `Siamese` class.  Suggest adding a unique attribute or method to better illustrate inheritance.
+- In Exercise 2, the `fight` method could benefit from more robust handling of potential errors (e.g., if `other_dog` is not a valid `Dog` instance). Consider adding type checking.
+- In Exercise 3, the prompt asks to import the `Dog` class from the previous exercise.  The provided code doesn't demonstrate this import explicitly. Clarify this process.
+- In Exercise 3, the solution for `PetDog`'s `__init__`, `train`, and `do_a_trick` methods are provided, whereas the instruction asked not to do so.
+- Add docstrings to all methods in Exercise 3 to improve code readability and understanding.
+- Improve the error handling in the Dog class __init__ method to provide more informative error messages.
+Correctness: 95%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week2/Day2/ExercisesXP/ExercisesXP2.py
+suggestions for improvement:
+- In the `PetDog` class's `play` method, the f-string formatting is incorrect. It should join the dog names with a comma and a space, not a comma alone.  The current implementation creates an incorrectly formatted string.  Use `', '.join(...)`.
+- Add docstrings to the `Dog` class methods (Exercise 2) for better readability and understanding.  The provided solution omits these.
+- In Exercise 4, the Family class could benefit from error handling (e.g., `try...except` blocks) to gracefully handle cases where a person with the specified first name isn't found in the `check_majority` method.  Currently, it doesn't handle this scenario explicitly.
+- Consider adding input validation to the `Family` class methods to prevent unexpected behavior or errors (e.g., checking if `age` is a positive number in `born()`).
+Correctness: 95%
+-----

@@ -92,4 +92,3 @@ t.down()
 
 for circle in circles:
     t.circle(circle.radius)
-    t.home

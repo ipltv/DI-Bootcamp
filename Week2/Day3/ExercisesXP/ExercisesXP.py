@@ -1,4 +1,9 @@
-#Exercise 1: Currencies
+import string
+import random
+from datetime import datetime
+from faker import Faker
+
+# Exercise 1: Currencies
 print("--------------Exercise 1--------------")
 
 class Currency:
@@ -10,7 +15,7 @@ class Currency:
         self.amount = amount
 
     def __str__(self):
-        return f"{str(self.amount)} {self.currency}s" if self.amount != 1 else f"{str(self.amount)} {self.currency}"
+        return f"{self.amount} {self.currency}" + ("s" if self.amount != 1 else "")
     
     def __int__(self):
         return self.amount
@@ -69,3 +74,46 @@ print(c1)
 
 #Exercise 3: String module
 print("--------------Exercise 3--------------")
+
+all_letters = string.ascii_letters
+len_all_letters = len(all_letters)
+result = ''.join(random.choice(all_letters) for _ in range(5))
+print(result)
+
+#Exercise 4: Current Date
+print("--------------Exercise 4--------------")
+
+def print_current_date():
+    print(datetime.today())
+    
+print_current_date()
+
+
+#Exercise 5: Amount of time left until January 1st
+print("--------------Exercise 5--------------")
+
+current_date = datetime.today()
+first_jan_next_year = datetime(current_date.year+1,1,1,0,0,0)
+
+print(f"Time left until January 1st: {first_jan_next_year - current_date}")
+
+
+#Exercise 6: Birthday and minutes
+print("--------------Exercise 6--------------")
+user_birthday = datetime.strptime(input("Please enter your birthday (DD/MM/YYYY): "),"%d/%m/%Y")
+print(f"You live here: {(current_date - user_birthday).total_seconds() / 60} minutes")
+
+#Exercise 7: Faker Module
+print("--------------Exercise 7--------------")
+
+def gen_users(number_of_users):
+    users = []
+    for _ in range(number_of_users):
+        user = {"name": fake.name(),"address":fake.address(), "language_code":fake.language_code()}
+        users.append(user)
+    return users
+
+fake = Faker()
+users = gen_users(5)
+
+print(*users, sep="\n")

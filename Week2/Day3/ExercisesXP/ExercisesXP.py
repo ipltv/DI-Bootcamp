@@ -2,8 +2,11 @@
 print("--------------Exercise 1--------------")
 
 class Currency:
+    '''Present currency with name and amount'''
     def __init__(self, currency, amount):
         self.currency = currency
+        if amount < 0:
+            raise ValueError("Currency amount cannot be negative")
         self.amount = amount
 
     def __str__(self):
@@ -60,7 +63,9 @@ c1 += c2
 print(c1)
 # 20 dollars
 
-print(c1 + c3)
+# print(c1 + c3)
 # TypeError: Cannot add between Currency type <dollar> and <shekel>
 
 
+#Exercise 3: String module
+print("--------------Exercise 3--------------")

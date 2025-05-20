@@ -4,21 +4,17 @@ import turtle
 
 class Circle:
     """A class representing a geometric circle."""
-    def __init__(self, radius=None):
+    def __init__(self, radius):
         """
         Initialize a Circle with radius.
-        Raises ValueError if None provided.
         """
-        if radius is not None:
-            self.radius = radius
-        else:
-            raise ValueError("Radius cannot be None")
+        self.radius = radius
         
     @classmethod
     def from_diameter(cls, diameter):
         """Create a Circle instance using the diameter."""
         if not isinstance(diameter, (int,float)) or diameter <= 0:
-            raise ValueError("Radius must be a positive number.")
+            raise ValueError("Diameter must be a positive number.")
         return cls(diameter/2)
     
     @property
@@ -45,7 +41,7 @@ class Circle:
 
     def __str__(self):
         """Return a readable string representation of the circle."""
-        return f"Circle - radius: {self.radius}; area: {self.area}"
+        return f"Circle - radius: {self.radius}; area: {self.area:.2f}"
     def __repr__(self):
         """Return a developer-friendly string representation."""
         return f"Circle(radius={self.radius})"
@@ -59,9 +55,9 @@ class Circle:
         return self.radius > other.radius
     def __lt__(self, other):
         """Return True if this circle is smaller than the other."""
-        return self.radius < other.radius      
+        return self.radius < other.radius
     def __eq__(self, other):
-        """Return True if the two circles have equal radius."""
+        """Return True if this circle has the same radius as the other."""
         return self.radius == other.radius
     def __ge__(self, other):
         """Return True if this circle is larger or equal than the other."""
@@ -72,9 +68,9 @@ class Circle:
     
     
 c1 = Circle(radius=50)
-c2 = Circle.from_diameter(200)#100
 c3 = Circle(radius=150)
-c4 = Circle.from_diameter(400)
+c2 = Circle.from_diameter(200)#100
+c4 = Circle.from_diameter(400)#200
 
 circles = [c1, c2, c3, c4]
 sorted_circles = sorted(circles)
@@ -84,14 +80,15 @@ print(sorted_circles)
 
 s = turtle.getscreen()
 t = turtle.Turtle()
-t.up()
-t.goto(0,-50)
-t.down()
+t.pensize(5)
 
-for circle in circles:
-    t.circle(circle.radius)
+for i, circle in enumerate(sorted_circles):
+    if i % 2 == 0:
+        t.pencolor("red")
+    else:
+        t.pencolor("green")
     t.up()
-    t.right(90)
-    t.forward(50)
-    t.left(90)
+    t.goto(0, -circle.radius)
     t.down()
+    t.circle(circle.radius)
+turtle.done()

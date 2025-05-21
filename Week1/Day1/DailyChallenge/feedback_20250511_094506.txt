@@ -1,0 +1,11 @@
+URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week1/Day1/DailyChallenge/daily_challenge.py
+suggestions for improvement:
+- Use f-strings for cleaner string formatting in the first and last character output.
+- The comments could be more concise and descriptive.  For example, instead of  `#checking if the length of the string is 10`, use `#Check string length`.
+- Add error handling for non-string input. The program could crash if the user enters a number or other non-string data.
+Brief justification:
+- correctness: The code correctly implements all the requirements of the chapter content. It takes user input, validates the string length, prints the first and last characters, builds the string character by character, and shuffles the string. The only minor issue is the lack of explicit handling of non-string input, which could lead to errors.
+- readability: The code is generally readable, but some improvements can enhance clarity. More concise comments and using f-strings would make the code easier to understand. The variable name `charts` could be more descriptive, like `shuffled_chars`.
+- performance: The code's performance is efficient.  The loop to build the string character by character and the string shuffling are implemented optimally for their respective tasks. There are no unnecessary computations or inefficient data structures.
+- security: The code doesn't have any security vulnerabilities. It only handles user input and string manipulation, which doesn't present any security risks.
+

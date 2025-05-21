@@ -134,3 +134,4 @@ main()
     # correct_length = len(pwd) == length
 
     # print(f"Test {i+1:03}: Length={length}, Password={pwd}, Valid={valid}, Length OK={correct_length}")
+    

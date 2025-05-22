@@ -1,6 +1,7 @@
 #Mini-project : Anagram checker
 
 from collections import Counter
+from collections import defaultdict
 import os
 
 class AnagramChecker:
@@ -10,7 +11,11 @@ class AnagramChecker:
             raise FileNotFoundError(f"The file at {file_path} was not found.")
         try:
             with open(file_path, "r", encoding="utf-8") as file:
-                self.word_list = [word.strip() for word in file.read().split()]
+                self.word_list = set([word.strip() for word in file.read().split()])
+                self.anagram_dict = defaultdict(list)
+                for word in self.word_list:
+                    key = ''.join(sorted(word))
+                    self.anagram_dict[key].append(word)
         except Exception as e:
             print("An error has occured. Original message: ", e)
         
@@ -33,11 +38,8 @@ class AnagramChecker:
     def get_anagrams(self, word):
         '''Finds all valid anagrams of the given word from the word list.'''
         word = word.upper()
-        anagrams = []
-        for candidate in self.word_list:
-            if candidate != word and self.is_anagram(candidate, word):
-                anagrams.append(candidate)
-        return anagrams
+        key = ''.join(sorted(word.upper()))
+        return [w for w in self.anagram_dict.get(key, []) if w != word.upper()]
     
     
 

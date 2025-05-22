@@ -35,5 +35,4 @@ while True:
             print(f"{idx}. {anagram}")
     else:
         print("No anagrams found.")
-    print(*result, sep="\n")
     

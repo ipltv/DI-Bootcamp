@@ -1,0 +1,12 @@
+URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week2/Day2/DailyChallenge/DailyChallenge.py
+suggestions for improvement:
+- The `next_page()` method has a slight off-by-one error. It should increment `current_idx` by 1, not 2.
+- The `previous_page()` method doesn't actually move to the previous page; it stays on the current page. It should decrement `current_idx` by 1.
+- Add a `__str__` method to display items on the current page, each on a newline, as specified in the requirements.
+- Consider adding input validation in `go_to_page` to handle non-integer inputs gracefully (e.g., type checking).
+Brief justification:
+- correctness: The code largely implements the `Pagination` class correctly, handling page navigation and item retrieval. However, there are minor flaws in `next_page()` and `previous_page()`, as they don't correctly adjust the `current_idx`.  The `go_to_page` method correctly handles out-of-bounds page numbers by raising a ValueError as specified. The `__str__` method is missing but easily added.  The core functionality of list slicing, page navigation, and error handling (as per the chapter's topics) is largely present but needs refinement as stated above. 
+- readability: The code is well-structured and easy to understand.  Method names are descriptive, and comments explain the purpose of each method. The code is well formatted and follows Python style guidelines.
+- performance: The code's performance is efficient. List slicing is an O(k) operation, where k is the number of elements in the slice, which is generally acceptable for pagination. There are no unnecessary computations or loops that would significantly impact performance.
+- security: The code is secure in that it handles potential errors (like out-of-bounds page numbers) by raising appropriate exceptions. There are no obvious security vulnerabilities.
+

@@ -1,0 +1,11 @@
+URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week1/Day3/DailyChallenge/daily_challenge.py
+suggestions for improvement:
+- In Challenge 1, add error handling for non-alphabetic characters in user input.  The current code will work without issue, but a robust solution would gracefully handle such scenarios.
+- In Challenge 2, the code assumes the input will always be formatted with a single dollar sign, a comma for thousands, etc. Adding more robust error handling (e.g., try-except blocks to catch exceptions like ValueError if the price string cannot be converted to an integer) would make the code more resilient to unexpected input.
+- Improve the comments in Challenge 2. The current comments explain what the code does, rather than *why* it's doing it which would improve readability for someone trying to understand the logic.
+Brief justification:
+- correctness: Both challenges are solved correctly for the given examples. The code accurately creates the letter index dictionary in Challenge 1 and identifies affordable items in Challenge 2.  However, there's a lack of robust error handling which slightly reduces the score.
+- readability: The code is generally well-structured and easy to follow.  Variable names are descriptive (except for the very short 'userInput'). However, comments in Challenge 2 could be greatly improved to explain the purpose of code sections instead of just describing what they do. Function would also help readability.
+- performance: The performance is good for the given task and input sizes. The algorithms used (iteration for dictionary creation and linear search for affordable items) are efficient for the scale of the problems. However, the lack of error handling does mean some inputs could cause unexpected behavior slowing down execution or even crashing the program, hence the slightly lower score.
+- security: There are no apparent security vulnerabilities in the provided code. It only deals with user input and string manipulation, which does not expose to security risks.
+

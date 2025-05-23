@@ -1,0 +1,8 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week2/Day5/DailyChallange/dailyChallangeW2D5.py
+suggestions for improvement:
+- The `Card` class uses Enums effectively for suits and values, enhancing readability and maintainability.  Consider adding a method to the `Deck` class to check for the presence of a specific card.
+- The `Deck` class's `shuffle` method correctly checks for 52 cards before shuffling.  However, error handling in `deal` could be improved; currently, it will raise an IndexError when the deck is empty. Consider a more informative exception.
+- The `cards` property in the `Deck` class returns a copy; this prevents external modification of the deck's internal state which is good practice for data protection. The use of properties with getters and setters for `suit` and `value` in the `Card` class is also a good example of encapsulation.
+- The `__repr__` method in the `Card` class provides a user-friendly string representation, improving the debugging experience.  Consider adding docstrings to the methods in the `Deck` class for better clarity.
+Correctness: 95%
+-----

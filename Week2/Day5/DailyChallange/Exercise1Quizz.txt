@@ -1,0 +1,33 @@
+# Exercise 1: Quizz
+# Answer the following questions:
+
+# Q: What is a class?
+# A: A class is a blueprint for creating objects (instances) that defines their structure and behavior. 
+# It can include fields (attributes), methods (functions), and properties.
+
+# Q: What is an instance?
+# A: An instance is a specific object created from a class. 
+# It contains real data and can use the class's methods and properties.
+
+# Q: What is encapsulation?
+# A: Encapsulation is an OOP principle that restricts direct access to an object's internal state. Instead, it exposes functionality through methods and properties. 
+
+# Q: What is abstraction?
+# A: Abstraction is an OOP principle that involves hiding unnecessary implementation details and exposing 
+# only the essential features of an object. It helps reduce complexity and improve focus.
+
+# Q: What is inheritance?
+# A: Inheritance is an OOP principle that allows a class (child or subclass) to inherit properties and methods 
+# from another class (parent or superclass), enabling code reuse and hierarchical relationships.
+
+# Q: What is multiple inheritance?
+# A: Multiple inheritance is a feature in some programming languages where a class can inherit from more than one parent class. 
+# This allows it to combine functionality from multiple sources.
+
+# Q: What is polymorphism?
+# A: Polymorphism is an OOP principle that allows objects of different classes to be treated as instances of the same parent class. 
+# It enables a single interface to work with different underlying data types.
+
+# Q: What is method resolution order or MRO?
+# A: Method Resolution Order (MRO) is the order in which Python looks for a method or attribute in a class hierarchy. 
+# It defines the sequence in which base classes are searched when executing a method.

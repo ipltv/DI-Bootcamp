@@ -13,19 +13,11 @@ const allBooks = [
   }
 ];
 
-
-const section = document.querySelector(".listBooks");
-
-allBooks.forEach(book => {
+function renderBook(book) {
   const bookDiv = document.createElement("div");
-
   const bookInfo = document.createElement("p");
   bookInfo.textContent = `${book.title} written by ${book.author}`;
-
-  if (book.alreadyRead) {
-    bookInfo.style.color = "red";
-  }
-
+  if (book.alreadyRead) bookInfo.style.color = "red";
 
   const img = document.createElement("img");
   img.src = book.image;
@@ -33,6 +25,9 @@ allBooks.forEach(book => {
 
   bookDiv.appendChild(bookInfo);
   bookDiv.appendChild(img);
-  
-  section.appendChild(bookDiv);
-});
+  document.querySelector(".listBooks").appendChild(bookDiv);
+}
+
+const section = document.querySelector(".listBooks");
+
+allBooks.forEach(renderBook);

@@ -3,7 +3,7 @@ let wordNot = sentence.indexOf("not");
 let wordBad = sentence.indexOf("bad");
 
 let newSentence = ""
-if (wordBad > wordNot && wordNot != -1){
+if (wordBad > wordNot && wordNot != -1 && wordBad != -1){
     newSentence = sentence.slice(0,wordNot) + "good" + sentence.slice(wordBad + "bad".length)
     console.log(newSentence)
 }

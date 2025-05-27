@@ -1,0 +1,66 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day2/ExercisesXP/exerciseXP5.js
+suggestions for improvement:
+- Use `querySelector` instead of `getElementsByTagName` where possible for better performance and readability.  `querySelector` is more efficient when selecting a single element.
+- The bonus alert could be improved; it's not robust if there aren't exactly two list items in the first `<ul>`.
+- Add comments explaining the purpose of different code blocks. This would improve readability and understanding. 
+- Consider using more descriptive variable names (e.g., instead of `div`, use `containerDiv`).
+Correctness: 95%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day2/ExercisesXP/exerciseXP6.js
+suggestions for improvement:
+- The code is well-structured and easy to follow.  Consider adding comments to explain the purpose of each section, especially for less experienced developers.
+- Using `document.getElementsByTagName('div').item(0)` might be less efficient than using a more specific selector like `document.getElementById('navBar')` if the ID is guaranteed to exist.  However, the provided code works correctly.
+- The code efficiently manipulates the DOM elements, completing all requirements with no unnecessary steps.
+Correctness: 100%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day2/ExercisesXP/exerciseXP7.js
+suggestions for improvement:
+- Add error handling for cases where the '.listBooks' section might not be found in the DOM.
+- Improve styling:  Instead of inline styling (`bookInfo.style.color = "red"`, `img.style.width = "100px"`), use CSS classes for better maintainability and separation of concerns.
+- Consider adding more descriptive class names to the created elements (e.g., `book-info`, `book-image`) for better HTML structure and maintainability.
+- The code doesn't handle the scenario where the image URL is invalid or unavailable.  Add error handling or a fallback image.
+Correctness: 95%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day2/ExercisesXP/exercisesXP1-4.js
+suggestions for improvement:
+- In `displayNumbersDivisible`, add input validation to handle non-numeric or zero divisors more robustly.  Currently, it only logs an error message; it could also return an appropriate value or throw an exception.
+- In `myBill`, the function modifies the `stock` object directly. It's generally better practice to avoid side effects in functions unless explicitly designed for mutation. Consider returning a new object or array reflecting the updated stock instead.
+- The `changeEnough` function uses a switch statement which is fine for this small example but for a larger set of denominations, a more scalable approach (like an array of denomination values and their multipliers) might be preferable.
+- In Exercise 4, consider using a more user-friendly way to handle input validation instead of just `parseInt` and `isNaN`.  A loop that keeps asking the user for a valid response until a correct input is given would enhance the user experience.  The prompt could also include informative messages regarding the error.
+- In Exercise 5, consider more efficient DOM manipulation techniques. For example, instead of selecting and modifying each element individually, consider using querySelectorAll to grab all elements, then a loop to manipulate them.  This improves efficiency, especially for larger lists.
+Correctness: 95%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day2/ExercisesXP/index1-4.html
+suggestions for improvement:
+- **Exercise 1:** The bonus part of `displayNumbersDivisible` is missing.  The function should accept a `divisor` parameter and use it in the loop.
+- **Exercise 2:** The bonus feature of decreasing stock after purchase is not implemented. The function also doesn't handle cases where an item isn't found in the `prices` object.
+- **Exercise 4:**  The `hotelCost`, `planeRideCost`, and `rentalCarCost` functions should ideally take input from a single prompt in the `totalVacationCost` function to meet the bonus requirement, rather than individual prompts.  Error handling for non-numeric input is also lacking. The discount logic for `rentalCarCost` is unclear.
+- **Exercise 5 & 6:** These exercises require HTML interaction which is not provided in the submitted code.  The assessment cannot be made without the JavaScript code that manipulates the DOM elements.
+- **General Readability:** Add comments to explain complex logic or non-obvious steps. Use more descriptive variable names.  Consistent indentation and spacing will greatly enhance readability.
+- **Error Handling:** Implement more robust error handling throughout the code. For example, check for invalid inputs, empty arrays, or non-existent keys in objects.
+Correctness: 75%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day2/ExercisesXP/index5.html
+suggestions for improvement:
+- The code lacks error handling for cases where elements are not found.  Add checks to prevent errors if selectors don't match any elements.
+- Improve the code's readability by using more descriptive variable names and adding comments to explain complex logic.
+- The bonus requirement in Exercise 5 (alerting user names if the background is light blue) is not implemented.
+- Exercise 6 could benefit from using more efficient DOM manipulation techniques, such as creating the new list item and appending it in a single operation. The current approach is a bit verbose.
+- Add input validation to the functions in Exercise 4 to handle non-numeric inputs more gracefully. Currently it only checks if the answer is not a number, and doesn't handle empty strings or other non-numeric input.
+Correctness: 85%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day2/ExercisesXP/index6.html
+suggestions for improvement:
+- The `exerciseXP6.js` file is missing, preventing a complete correctness assessment of Exercise 6.  The HTML structure for Exercise 6 is correctly implemented.
+- Add comments to explain the purpose of different code sections in `exerciseXP6.js` (once provided).
+- Consider using more descriptive variable names. For example, instead of `x` and `y` in a potential bonus alert (Exercise 5), use `userName1` and `userName2`.
+Correctness: 80%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day2/ExercisesXP/index7.html
+suggestions for improvement:
+- The code doesn't handle cases where the `allBooks` array is empty or contains invalid book objects. Add error handling for these scenarios.
+- Improve the readability by using more descriptive variable names.  For example, `img` could be `bookImage`.
+- Add comments to explain the purpose of different code sections, particularly the DOM manipulation parts.
+- The styling could be improved by using CSS instead of inline styles. This will separate concerns and improve maintainability.
+Correctness: 80%
+-----

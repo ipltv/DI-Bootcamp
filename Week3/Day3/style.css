@@ -2,3 +2,12 @@
     display: inline-block;
     border: 1px;
 }
+
+#div1{
+    padding: 50px;
+    background-color: lightblue;
+}
+#div2{
+    padding: 50px;
+    background-color: lightcoral;
+}

@@ -81,3 +81,27 @@ function getValueFromInput(){
     const input = document.querySelector("input");
     console.log(input.value)
 }
+
+function handSubmit (e){
+    e.preventDefault()
+    console.log(e.target.fname.value)
+}
+
+const div1 = document.getElementById("div1");
+const div2 = document.getElementById("div2");
+const btn1 = document.getElementById("btn1");
+
+console.log(div1, div2, btn1);
+
+div1.addEventListener("click", (e) => {
+    console.log("div1 was clicked")
+}, false)
+
+div2.addEventListener("click", (e) => {
+    console.log("div2 was clicked")
+}, false)
+
+btn1.addEventListener("click", (e) => {
+    console.log("btn1 was clicked")
+    e.stopPropagation()
+}, false)

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="scripts/script8.js" defer></script> -->
+</head>
+
+<body>
+
+</body>
+<script>
+    const makeJuice = function (size) {
+        let ingredients = [];
+        const addIngredients = function (firstIngredient, secondIngredient, thirdIngredient){
+            ingredients = ingredients.concat([firstIngredient,secondIngredient,thirdIngredient]);
+        }
+        const displayJuice = function (){
+            let p = document.createElement("p");
+            let resultString = `The client wants a ${size} juice, containing ` + ingredients.join(", ");
+            p.innerText = resultString;
+            document.body.appendChild(p);
+        }
+        addIngredients("Apple","Mango","Bannana");
+        addIngredients("Orange","Pineapple","Kiwi");
+        displayJuice();
+    }
+    makeJuice("Large");
+</script>
+
+</html>

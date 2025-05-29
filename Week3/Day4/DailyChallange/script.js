@@ -9,7 +9,7 @@ const groceries = {
         meansOfPayment: ["cash", "creditCard"]
     }
 }
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 const displayGroceries = () => {
     groceries.fruits.forEach((element) => console.log(element));
 }

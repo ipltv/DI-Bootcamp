@@ -1,3 +1,4 @@
+// Exercise 1 : Scope
 // #1
 function funcOne() {
     let a = 5;

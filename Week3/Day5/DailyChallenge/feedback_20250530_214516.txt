@@ -1,0 +1,28 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day5/DailyChallenge/index.html
+suggestions for improvement:
+- Implement Bonus I:  Add task objects with id, text, and done properties.  Use data attributes for task IDs in the DOM.
+- Implement Bonus II: Add a deleteTask function to remove tasks from the array and DOM.
+- Improve styling:  The current CSS is missing (not provided), leading to a basic, unstyled to-do list. Add CSS to match the image provided.
+- Error Handling: Add input validation to handle potential errors (e.g., non-string input).
+- Use a more descriptive ID for the list container:  `listTasks` is a bit generic. Consider `taskList` or `toDoList`.
+Correctness: 85%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day5/DailyChallenge/script.js
+suggestions for improvement:
+- The HTML structure should be explicitly defined in the provided code, not just described in comments.  Include the `<ul>` element in the HTML.
+- The `tasks` variable should be an array, not an object, as the instructions suggest. Using an object as a dictionary leads to issues with task IDs, which could be non-sequential.
+- The `addTask` function should handle potential errors or edge cases more gracefully. The current implementation is a bit abrupt (it just returns).  Consider showing a message to the user if the input is empty.
+- Use more descriptive variable names. For instance, `inputValue` could be `newTaskText`.
+- Add comments to explain complex logic and the purpose of individual functions.
+- Consider using a template literal for creating the list item to enhance readability and maintainability.
+- The solution uses font-awesome, but doesn't include the necessary CDN link to use font awesome. You need to add `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />` in the head of your HTML file.
+Correctness: 80%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day5/DailyChallenge/style.css
+suggestions for improvement:
+- Implement the bonus features (handling checkboxes and the 'X' button for task completion and deletion).
+- Add error handling for edge cases, such as an empty input field.
+- Use a more descriptive ID for the task list div (e.g., `taskList`) for better code readability and maintainability.
+- Improve the styling to match the provided image more closely, specifically concerning font styles and spacing of elements.
+Correctness: 80%
+-----

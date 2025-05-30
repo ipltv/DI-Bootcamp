@@ -15,7 +15,7 @@ function doneTask(event) {
     const label = document.querySelector(`label[for='${taskId}']`);
     if (label) {
         label.style.textDecoration = isChecked ? "line-through" : "";
-        label.style.color = isChecked ? "grey" : "black";
+        label.style.color = isChecked ? "#FF0101" : "black";
     }
 }
 

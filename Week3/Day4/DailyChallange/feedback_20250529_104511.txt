@@ -1,0 +1,7 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day4/DailyChallange/script.js
+suggestions for improvement:
+- The `cloneGroceries` function's creation of the `shopping` variable is not a true deep copy.  Changes to nested objects within `shopping` also affect the original `groceries` object. A deep clone is needed to fully isolate changes. Consider using the `structuredClone()` method for a true deep copy or a library like Lodash's `cloneDeep()`.
+- The comments in `cloneGroceries` are partially inaccurate.  The comment `//Not effected on groceries` is incorrect because changes to nested objects *are* reflected in the original object due to the shallow copy.
+- Add more descriptive variable names than `element` in the `forEach` loop. For example, use `fruit`.
+Correctness: 80%
+-----

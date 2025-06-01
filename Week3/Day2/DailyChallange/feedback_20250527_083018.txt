@@ -1,0 +1,22 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day2/DailyChallange/index.html
+suggestions for improvement:
+- The code is missing the implementation of creating planets and moons in the `script.js` file.  The HTML structure is correct, but without the JavaScript, it doesn't fulfill the requirements.
+- The bonus part (creating moons) is not implemented.  The instructions suggest using an array of objects to represent planets and their moons, which would be a more efficient and organized approach.
+- The color assignment for planets is not implemented.  Each planet should have a distinct background color.
+- Add comments to the JavaScript code to explain the logic and purpose of different parts.
+Correctness: 70%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day2/DailyChallange/script.js
+suggestions for improvement:
+- Add CSS classes for each planet's color to the HTML's `<style>` tag or a separate CSS file.  The current solution relies on dynamically adding classes which are not defined.  This makes it harder to maintain and style.
+- Consider using more descriptive variable names. For example, instead of `div`, use `planetDiv`.
+- While the moon positioning is good, adding a small random variation to the moon's radius could make it look even more natural. 
+Correctness: 95%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day2/DailyChallange/style.css
+suggestions for improvement:
+- The code is missing the JavaScript implementation to create and append the planets and moons to the HTML.  The CSS is provided, but the core logic to dynamically create the elements is absent.
+- The bonus task of handling moons is not implemented. The instructions suggest using an array of objects to represent planets and their moons; this would be a more efficient and organized approach.
+- The colors are defined as CSS classes which is good for reusability, but this necessitates adding the appropriate classes to each created planet div.
+Correctness: 80%
+-----

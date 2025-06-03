@@ -1,0 +1,22 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day1/ExercisesXP/Normal/ExercisesXP.js
+suggestions for improvement:
+- In Exercise 1, Part I, question 7, the `slice` method is used unnecessarily to get the last element.  Using `people.at(-1)` or `people[people.length - 1]` would be more efficient and clearer.
+- Exercise 1, Part II, question 2: The loop's break condition could be improved for readability.  Consider using a `for...of` loop with a more direct break condition based on the person's name.
+- In Exercise 2, the suffix handling could be simplified. Using a lookup array is good but could be handled more elegantly. Consider using a ternary operator for the conditional logging.
+- Exercise 3 lacks input validation.  It assumes the user will input a number; otherwise, `Number(phone_number)` will return `NaN`, potentially leading to an infinite loop.
+- Exercise 6 can be improved for clarity by avoiding string concatenation in the loop.  Using `Object.values()` and `join()` is more efficient and readable.
+- Exercise 7 doesn't handle potential errors.  What if `names` array is empty or contains elements without a first letter?
+- Add comments to explain code logic where clarity is lacking. Especially in the more complex exercises like the Building Management one. Make sure that the variable names are consistent and descriptive.
+Correctness: 90%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day1/ExercisesXP/Normal/index.html
+suggestions for improvement:
+- Exercise 1, Part I, question 5: The `slice` method's usage could be more efficient.  Instead of calculating indices, use `indexOf` to find the starting and ending points for `slice`. This makes it easier to understand and maintain.
+- Exercise 1, Part II, question 2:  Using a `for` loop instead of a `forEach` loop might be more readable in this specific case, as it allows for an explicit `break` statement.
+- Exercise 2: The bonus part of using ordinal suffixes (1st, 2nd, 3rd, etc.) is implemented but could be improved by using a more concise and efficient method (such as a lookup table or a function that calculates the suffix).
+- Exercise 4:  The code is functional but lacks comments explaining the logic of checking rent sums and updating Dan's rent. Adding comments would significantly improve readability.
+- Exercise 6:  A more elegant solution for Exercise 6 would involve string concatenation rather than looping through the object and concatenating individual strings within the loop. The current loop is unnecessarily verbose.
+- Consistent indentation and spacing should be used throughout the code for better readability.
+- Add comments to explain complex logic or less obvious parts of the code to improve understanding.
+Correctness: 85%
+-----

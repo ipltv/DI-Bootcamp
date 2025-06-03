@@ -9,13 +9,11 @@ const inventory = [
 function getCarHonda(carInventory){
   let firstHonda  = carInventory.find((item) => item.car_make == "Honda");
   return `This is a ${firstHonda.car_make} ${firstHonda.car_model} from ${firstHonda.car_year}`;
-}
-
+};
 console.log(getCarHonda(inventory));
 
 function sortCarInventoryByYear(carInventory) {
   return carInventory.sort((a,b) => a.car_year - b.car_year);
-}
-
+};
 console.log(inventory);
 console.log(sortCarInventoryByYear(inventory));

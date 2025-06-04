@@ -114,7 +114,7 @@ class Animal {
 }
 
 class Mammal extends Animal {
-    constructor(name, type, color) {
+    constructor(name, type, colocr) {
         super(name,type,color);
     }
 

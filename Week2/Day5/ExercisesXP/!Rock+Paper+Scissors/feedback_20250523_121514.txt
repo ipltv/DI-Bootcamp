@@ -1,0 +1,18 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week2/Day5/ExercisesXP/!Rock+Paper+Scissors/game.py
+suggestions for improvement:
+- In `get_user_item`, the input validation could be improved by using a loop that continues until valid input is received.  Currently, it only checks if the input is an integer between 1 and 3, but doesn't handle non-numeric input gracefully.
+- The `main` function (and associated functions in `rock-paper-scissors.py`) is missing, making it impossible to test the complete game flow. Add a `main` function in `rock-paper-scissors.py` to handle the menu, score tracking, and game loop.
+- Add comprehensive docstrings to all functions and classes, clarifying input/output parameters, and expected behavior
+- Consider using a more descriptive naming convention. For example, instead of `RULES`, use `WINNING_COMBINATIONS`.
+Correctness: 95%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week2/Day5/ExercisesXP/!Rock+Paper+Scissors/rock-paper-scissors.py
+suggestions for improvement:
+- The `game.py` file is missing, preventing a complete assessment of the game logic.  The provided code only shows the UI part.
+- Add more comprehensive error handling to anticipate potential issues like the user entering non-numeric input in the menu.
+- Improve the `get_user_menu_choice` function to handle unexpected inputs more gracefully (e.g., non-integer input).
+- Consider using a more descriptive name for the `results` dictionary, such as `game_scores`.
+- The `print_results` function could be enhanced by adding a clear header or separator to visually separate the results from the rest of the output.
+- Add docstrings to the `main` function to explain its purpose and behavior more clearly.
+Correctness: 95%
+-----

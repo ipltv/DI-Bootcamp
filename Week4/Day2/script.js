@@ -35,13 +35,14 @@
 // console.log(findIntersection(["1,2,2,5,6,7", "2,2,5,7,8,15"]));
 
 
-let user = {
-    name: "John",
-    email: "jjjj@gmail.com",
-    age: 25
-}
+// let user = {
+//     name: "John",
+//     email: "jjjj@gmail.com",
+//     age: 25
+// }
 
 // console.log(user);
+
 // let value = user["name"];
 // let value1 = user.age;
 
@@ -50,4 +51,25 @@ let user = {
 // value1 = user.email;
 // user.address = {city: "tel aviv"};
 
-console.log(user);
+// console.log(user);
+
+class User{
+    constructor(name){
+        this.name = name;
+    }
+    hello(){
+        console.log("Hello, ", this.name);
+    }
+}
+
+class Student extends User {
+    constructor(name){
+        super(name);
+    }
+}
+
+let arr = [new Student("Bill"), new Student("Greg"), new Student("John")];
+
+for(let x of arr){
+    x.hello();
+}

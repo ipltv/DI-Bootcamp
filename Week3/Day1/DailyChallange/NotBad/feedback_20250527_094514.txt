@@ -1,0 +1,18 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day1/DailyChallange/NotBad/DailyChallengeNotBad.js
+suggestions for improvement:
+- The string slicing in the `if` block is incorrect.  `sentence.slice(wordBad + "bad".length)` should be `sentence.slice(wordBad + 3)`.  It's currently attempting to concatenate a number to a string.
+- Add more robust error handling.  The current code assumes that "not" and "bad" will always be present if the condition is met. Consider handling cases where these words might be missing.
+- Improve variable names for better readability.  `wordNot` and `wordBad` aren't very descriptive; consider names like `notIndex` and `badIndex`.
+- The code could benefit from more comments explaining the logic, especially the conditional statement and string manipulation.
+- Consider using a regular expression for a more concise and flexible solution. This would handle cases where the sentence structure varies slightly.
+Correctness: 80%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day1/DailyChallange/NotBad/index.html
+suggestions for improvement:
+- The code doesn't handle cases where 'not' or 'bad' appear multiple times in the sentence.  It only considers the first instance of each word.
+- Add more robust error handling.  What if the input sentence is null or undefined?
+- Consider using more descriptive variable names (e.g., `indexOfNot`, `indexOfBad` instead of `wordNot`, `wordBad`).
+- The comments could be slightly improved to be more concise and informative.
+- Add input validation to ensure the input is actually a string.
+Correctness: 85%
+-----

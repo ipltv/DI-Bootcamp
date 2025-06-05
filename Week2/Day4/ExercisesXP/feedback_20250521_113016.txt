@@ -1,0 +1,17 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week2/Day4/ExercisesXP/ExerciseXP.py
+suggestions for improvement:
+- In `get_words_from_file`, error handling for file not found should be included.  The current implementation relies on the `main` function to check if the file exists.  This should be handled within the function itself.
+- The `get_random_sentence` function could be made more efficient by loading the word list once and caching it, instead of reloading it each time the function is called. This is especially relevant if the word list is very large.
+- Add more robust input validation in the main function.  For example, handle non-numeric input more gracefully.
+- In Exercise 2, consider adding error handling (using `try-except` blocks) to protect against potential issues such as the JSON string being malformed or the file not being writable.
+Correctness: 95%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week2/Day4/ExercisesXP/data.json
+suggestions for improvement:
+- The provided code snippet only addresses Exercise 2, not Exercise 1.  Exercise 1 requires implementing file handling, random number generation, and string manipulation to create a random sentence generator.
+- Error handling (try-except blocks) is missing in Exercise 2.  The code should include error handling to gracefully manage potential issues such as the file not being found or issues with JSON parsing.
+- Input validation is missing in Exercise 2.  While the exercise doesn't explicitly request user input,  it's good practice to ensure the provided JSON string is valid before processing.
+- The `birth_date` should be added dynamically, rather than hardcoded. The instructions ask to add a new key with that value, not to hardcode it.
+- The code doesn't save the modified JSON to a file, a key requirement of Step 4 in Exercise 2.
+Correctness: 80%
+-----

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Exercise 1 : HTML Form -->
+    <h2>GET Method Form</h2>
+    <form method="GET">
+        <label for="nameBox">Name</label><br>
+        <input id="nameBox" type="text" name="name" placeholder="Name..."><br>
+
+        <label for="commentsBox">Comments</label><br>
+        <textarea name="comments" id="commentsBox"></textarea><br>
+
+        <input type="submit">
+        <!-- Where will the sent data appear?
+            Answer:  We can see the data in the URL string in the browser. 
+                    It will be separated from the base URL by a question mark, 
+                    and contain key-value pairs.-->
+    </form><br>
+
+    <!-- Exercise 2 : HTML Form #2 -->
+    <h2>POST Method Form</h2>
+    <form method="POST">
+        <label for="nameBox2">Name</label><br>
+        <input id="nameBox2" type="text" name="name" placeholder="Name..."><br>
+
+        <label for="commentsBox2">Comments</label><br>
+        <textarea name="comments" id="commentsBox2"></textarea><br>
+
+        <input type="submit">
+        <!-- Where will the sent data appear?
+            Answer:  The form data will be sent inside the HTTP request body. 
+                     We can see it in the Network tab of the Developer Tools.
+                    The data will appear in the Payload section..
+             -->
+    </form>
+    <!-- Exercise 3 : JSON Mario -->
+    <script>
+        const marioGame = {
+            detail: "An amazing game!",
+            characters: {
+                mario: {
+                    description: "Small and jumpy. Likes princesses.",
+                    height: 10,
+                    weight: 3,
+                    speed: 12,
+                },
+                bowser: {
+                    description: "Big and green, Hates princesses.",
+                    height: 16,
+                    weight: 6,
+                    speed: 4,
+                },
+                princessPeach: {
+                    description: "Beautiful princess.",
+                    height: 12,
+                    weight: 2,
+                    speed: 2,
+                }
+            },
+        }
+        let jsonData = JSON.stringify(marioGame);
+        debugger;
+        console.log(jsonData);
+        //When converted to JSON, nested JavaScript objects become nested JSON objects.
+        let jsonDataWithPrettyPrint = JSON.stringify(marioGame, null, 4);
+        console.log(jsonDataWithPrettyPrint);
+        // The indent parameter adds spaces to format the JSON string for better readability.
+    </script>
+</body>
+
+</html>

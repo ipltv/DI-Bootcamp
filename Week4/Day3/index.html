@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <h2>HTTP Methods, Forms, JSON & Exeprions</h2>
+    <h2>Form with GET</h2>
+    <form method="GET">
+        <input type="text" name="username" placeholder="Username..." />
+        <input type="password" name="pass" placeholder="Password..." />
+        <input type="submit" />
+    </form>
+    <h2>Form with POST</h2>
+    <form method="POST">
+        <input type="text" name="username" placeholder="Username..." />
+        <input type="password" name="pass" placeholder="Password..." />
+        <input type="submit" />
+    </form>
+    <h2>Get User JSON</h2>
+    <form method="GET" action="https://jsonplaceholder.typicode.com/users">
+        <input type="submit" />
+    </form>
+    <h2>Get One User JSON</h2>
+    <form method="GET" action="https://jsonplaceholder.typicode.com/users">
+        <input type="text" name="id" placeholder="User ID...">
+        <input type="submit" />
+    </form>
+    <h2>Get One User JSON with hidden input</h2>
+    <form method="GET" action="https://jsonplaceholder.typicode.com/users">
+        <input type="hidden" name="id" value="7">
+        <input type="submit" />
+    </form>
+    <h2>Search on Google</h2>
+    <form method="GET" action="https://www.google.com/search">
+        <input type="text" name="q">
+        <input type="submit">
+    </form>
+    <h2>Add a Post</h2>
+    <form method="post" action="https://jsonplaceholder.typicode.com/posts">
+        <input name="title" placeholder="Title..."><br>
+        <input name="body" placeholder="Body..."><br>
+        <input name="userId" placeholder="User ID.."><br>
+        <input type="submit" value="Add Post">
+    </form>
+
+    <!-- POST https://users-18kl.onrender.com/user -->
+    <h2>Post User</h2>
+    <form method="post" action="https://users-18kl.onrender.com/user">
+        <input name="name" type="text" placeholder="Name"><br>
+        <input name="email" type="email" placeholder="E-Mail"><br>
+        <input name="username" type="text" placeholder="User Name"><br>
+        <input type="submit" value="Add User">
+    </form>
+</body>
+
+</html>

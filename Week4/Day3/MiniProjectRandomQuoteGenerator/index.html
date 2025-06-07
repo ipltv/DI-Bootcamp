@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <button id="generateBtn" type="button">Generate Quote</button>
+        <section id="quoteSection"></section>
+        
+        <p id="quoteInfroParagraph"></p>
+        <button id="chrWithSpacesBtn" type="button">Characters (with spaces)</button>
+        <button id="chrNoSpacesBtn" type="button">Characters (no spaces)</button>
+        <button id="wordCountBtn" type="button">Word count</button>
+        <button id="likeBtn" type="button">Like</button>
+        
+        <form id="addQuoteForm">
+            <label for="userQuote">Your Quote</label><input type="text" id="userQuote" name="userQuoteInput">
+            <label for="userQuoteAuthor">Author</label><input type="text" id="userQuoteAuthor" name="userQuoteAuthorInput">
+            <input type="submit" value="Add Quote">
+        </form>
+        
+        <form id="filterForm">
+            <label for="filterQuoteAuthor">Author</label><input type="text" id="filterQuoteAuthor" name="filtredAuthor">
+            <input type="submit" value="Filter">
+            <input type="button" value="Next">
+            <input type="button" value="Previous">
+        </form>
+        
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>

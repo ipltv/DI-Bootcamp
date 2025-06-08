@@ -1,38 +1,31 @@
-let user = {
-    id: 1,
-    name: "Leanne Graham",
-    username: "Bert",
-    email: "sen@april.biz",
-    age: undefined,
-    getName: function (){
+// 🌟 Exercise 1 : Comparison
 
-    },
-    password: "123$43235"
+function compareToTen(num) {
+    return num <= 10 ? new Promise((resolve, reject) => resolve(`Resolved => ${num} less or equal 10`)) : new Promise((resolve, reject) => reject(`Rejected => ${num} is greater than 10`));
 }
 
-console.log(user);
+compareToTen(15)
+    .then(result => console.log(result))
+    .catch(error => console.log(error));
 
-/**
- * JSON.stringify(obj - mandatory, filter function, indent/prety)
- */
+compareToTen(8)
+    .then(result => console.log(result))
+    .catch(error => console.log(error));
 
-const finlterMyJson = (key, value) => {
-    if (key === "password") return undefined;
-    return value;
-}
+//  Exercise 2 : Promises
+const successfulPromise = new Promise((resolve) => {
+    setTimeout(() => {
+        resolve("success");
+    }, 4000)
+})
 
-let userJSON = JSON.stringify(user, finlterMyJson,1);
-console.log(userJSON);
+successfulPromise.then(res => console.log(res));
 
-let userFromJson = `{
- "id": 1,
- "name": "Leanne Graham",
- "username": "Bert",
- "email": "sen@april.biz"
-}`;
+//  Exercise 3 : Resolve & Reject
 
-/**
- * JSON.parse
- */
+const X = Promise.resolve(3);
+const Y = Promise.reject("Boo");
 
-console.log(JSON.parse(userFromJson));
+X.then(res => console.log(res));
+Y.catch(res => console.log(res));
+

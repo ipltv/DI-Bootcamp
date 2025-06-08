@@ -22,8 +22,8 @@
             let name = e.target.elements.name.value;
             let lastname = e.target.elements.lastName.value;
             let obj = {
-                name: name,
-                lastname: lastname
+                name,
+                lastname
             }
             let p = document.createElement("p");
             p.innerText = JSON.stringify(obj);

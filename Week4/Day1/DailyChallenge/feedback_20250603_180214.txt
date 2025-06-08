@@ -1,0 +1,6 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week4/Day1/DailyChallenge/script.js
+suggestions for improvement:
+- The code can be slightly improved by using more descriptive variable names. For example, `usernamesWithScoreBigger5` could be renamed to something like `highScoringUsers`.
+- Consider adding comments to explain the purpose of each section of code, especially for the `reduce` method, to enhance readability.
+Correctness: 100%
+-----

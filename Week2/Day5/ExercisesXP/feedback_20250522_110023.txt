@@ -1,0 +1,22 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week2/Day5/ExercisesXP/anagram_checker.py
+suggestions for improvement:
+- The `anagrams.py` file, responsible for the user interface, is missing.  The instructions explicitly require this file.
+- Error handling in `__init__` could be improved.  Instead of just printing an error, it should perhaps raise a more specific exception or at least log the error for debugging purposes.
+- The performance of `get_anagrams` could be improved.  Currently, it iterates through the entire word list for each word.  A more efficient approach would be to pre-process the word list to group words by their sorted character sets (anagrams will have the same sorted character set).
+- Add more robust input validation in `anagrams.py` (if implemented) to handle edge cases and potential errors more gracefully.
+- Consider adding docstrings to the methods in `anagrams.py` (if implemented) to clearly explain their purpose and parameters.
+Correctness: 95%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week2/Day5/ExercisesXP/anagrams.py
+suggestions for improvement:
+- Implement the `AnagramChecker` class with the specified methods (`__init__`, `is_valid_word`, `get_anagrams`, and the helper method `is_anagram`).
+- The `get_anagrams` method should efficiently find all anagrams.  The current implementation is missing and needs to be added.
+- Improve error handling. Currently, only `FileNotFoundError` is explicitly handled; other exceptions during file loading should be managed more robustly.
+- Add more comprehensive input validation. While the code checks for single words and alphabetic characters, consider adding checks for empty input or inputs that are too long.
+- The output formatting could be enhanced for better readability, especially with a large number of anagrams.
+- Consider using a more efficient data structure for storing and searching the word list (e.g., a set).
+- Separate the UI logic (in `anagrams.py`) more clearly from the anagram-checking logic (in `anagram_checker.py`).
+- Add docstrings to methods for better understanding and maintainability.
+- The `sowpods.txt` file is a zip file, the code should handle the unzip operation.
+Correctness: 90%
+-----

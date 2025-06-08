@@ -1,0 +1,8 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week4/Day3/DailyChallenge/index.html
+suggestions for improvement:
+- Use more descriptive variable names (e.g., `firstName` instead of `name`).
+- Consider adding input validation to handle empty or invalid entries.
+- Improve styling for better presentation; the JSON output could be formatted differently for improved readability.
+- The `method='GET'` attribute in the `<form>` tag might not be ideal for sending user data, especially sensitive data; consider using `POST` for better security practices.
+Correctness: 95%
+-----

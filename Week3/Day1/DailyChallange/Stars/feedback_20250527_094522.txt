@@ -1,0 +1,16 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day1/DailyChallange/Stars/index.html
+suggestions for improvement:
+- The `stars.js` file is missing, preventing a complete evaluation of correctness.  The provided HTML only sets up the page; the actual logic is absent.
+- Add comments to explain the logic within the `stars.js` file (when provided).  This improves readability and maintainability.
+- While the single loop approach is arguably more performant for this specific task, the instructions explicitly require both single and nested loop implementations.  The missing code prevents assessment of this aspect.
+- Consider using more descriptive variable names (e.g., `numStars` instead of a single letter).
+- Structure the code in the JS file logically – for example, separate functions for each loop implementation.
+- Add error handling (though unlikely necessary here) to make the code robust.
+Correctness: 80%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day1/DailyChallange/Stars/stars.js
+suggestions for improvement:
+- The single loop solution is very concise and efficient.  Consider adding a comment explaining how the `repeat()` method works for clarity.
+- The nested loop solution is clear and easy to understand. The use of `result_string` is a good practice for building the output string incrementally.
+Correctness: 100%
+-----

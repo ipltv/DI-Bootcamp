@@ -1,0 +1,8 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week4/Day3/ExercisesXP/index.html
+suggestions for improvement:
+- Exercise 1 and 2:  The instructions specify using the same HTML file for the action URL.  While the code implicitly does this by omitting the `action` attribute, it's best practice to explicitly set `action="self.html"` (or the appropriate filename) for clarity.  This improves maintainability and avoids ambiguity if the filename changes.
+- Exercise 1 and 2: The answers within the HTML comments are good, but they could be slightly more precise. For the POST request, specifying 'form-data' within the Payload section would be more accurate.
+- Security:  Avoid directly embedding answers within the HTML.  These are easily visible to anyone viewing the source code, defeating the purpose of the exercises.  Consider separating the answers into a separate file (like a markdown document) or providing a 'solution' section after submission
+- Exercise 3: While the code correctly converts the JS object to JSON, it lacks the explicit demonstration requested in the instructions.  The comments explain what happens to nested objects, but this could be improved by showing that the output JSON is the expected structure.
+Correctness: 90%
+-----

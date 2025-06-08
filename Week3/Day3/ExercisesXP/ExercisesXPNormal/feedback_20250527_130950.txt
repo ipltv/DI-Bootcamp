@@ -1,0 +1,70 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day3/ExercisesXP/ExercisesXPNormal/index1.html
+suggestions for improvement:
+- Exercise 1: Implement the missing event listeners for h2 and h3.  The provided code only includes the button functionality.
+- Exercise 1: Add the hover effects for h1 and the second paragraph (Bonus).
+- Exercise 1:  The code is missing the random number generation for the h1 font size.
+- Exercise 1: Implement the CSS for the fade-out effect on hover of the second paragraph. The provided CSS only defines the class; it's not applied dynamically.
+- Exercise 2: The code is missing the implementation of this exercise.  No form handling is present.
+- Exercise 3: The code is missing the implementation of this exercise.  No bold text manipulation is present.
+- Exercise 4: The code is missing the implementation of this exercise.  No sphere volume calculation is present.
+- Use more descriptive variable names.  For example, instead of just `allBoldItems`, consider `paragraphBoldElements`.
+Correctness: 85%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day3/ExercisesXP/ExercisesXPNormal/index2.html
+suggestions for improvement:
+- The provided HTML file is incomplete.  It lacks the necessary `<article>` and `<p>` elements from Exercise 1 and Exercise 3, and the JavaScript (`script2.js`) to handle the DOM manipulations and event listeners described in Exercises 1, 2, 3, and 4.  Without the JavaScript, none of the exercises' functionality is implemented.
+- Exercise 2 is only partially represented with the HTML form.  The JavaScript to handle form submission and dynamic list creation is missing.
+- Exercise 3's paragraph element and associated JavaScript functions (`getBoldItems`, `highlight`, `returnItemsToDefault`) are missing.
+- Exercise 4's sphere volume calculation JavaScript is missing.
+- Add comments to the code to explain the purpose of different sections, especially the event listeners.
+Correctness: 0%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day3/ExercisesXP/ExercisesXPNormal/index3.html
+suggestions for improvement:
+- The provided HTML file is incomplete.  It's missing the JavaScript code (script3.js) required to implement exercises 3 and 4. The instructions specify several functions (`getBoldItems`, `highlight`, `returnItemsToDefault`) which are not defined in the provided code.
+- Exercise 3 requires event listeners for `mouseover` and `mouseout` on the paragraph to change the color of bold text.  This is not implemented.
+- Exercise 4, which involves calculating the volume of a sphere, is completely missing from the HTML.
+Correctness: 0%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day3/ExercisesXP/ExercisesXPNormal/index4.html
+suggestions for improvement:
+- The provided HTML file is only a part of the whole exercise. It's missing the JavaScript code (script4.js) required to calculate and display the volume of the sphere.  Without the JavaScript, there's no functionality to assess.
+- The HTML structure is simple and well-formatted, making it easy to read and understand.
+Correctness: 0%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day3/ExercisesXP/ExercisesXPNormal/script1.js
+suggestions for improvement:
+- Add the button element (`<button id="boldBtn">Make Paragraphs Bold</button>`) to the HTML within the `<article>` tag  as instructed.
+- The `fade-out` class needs to be defined in a CSS stylesheet to achieve the fade-out effect. Add CSS rules for the `.fade-out` class to handle the animation.
+- For Exercise 2, the code is missing.  The solution should include the code to handle form submission, input validation, and appending list items.
+- Exercise 3 is missing. The code should include the global variable `allBoldItems`, functions `getBoldItems()`, `highlight()`, and `returnItemsToDefault()`, and event listeners for mouseover and mouseout on the paragraph.
+- Exercise 4 is missing. The code should include the JavaScript to calculate the volume of a sphere and update the volume input field.
+- Exercise 5 is missing. Add the code that fulfills the instructions for Exercise 5
+Correctness: 85%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day3/ExercisesXP/ExercisesXPNormal/script2.js
+suggestions for improvement:
+- Exercise 1 is missing.  The provided code only addresses Exercise 2.
+- Add input validation to prevent non-alphanumeric characters in names.
+- Improve error handling for the case where the `<ul>` element is not found.
+- Use `querySelector` instead of `getElementsByTagName` for better performance and readability in Exercise 2.
+- Add comments explaining the purpose of each section of code (especially in Exercise 2).
+Correctness: 80%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day3/ExercisesXP/ExercisesXPNormal/script3.js
+suggestions for improvement:
+- Exercise 1: The code is missing implementations for several steps (1, 2, 3, 4, 5, Bonus 1 & 2).
+- Exercise 2: The code is missing entirely.
+- Exercise 3: The code correctly implements the functionality of changing the color of bold text on mouseover and mouseout. However, it could be improved by handling edge cases and making it more robust.
+- Exercise 4: The code is missing entirely.
+- Exercise 5: The code is missing entirely.
+- Use more descriptive variable names (e.g., instead of `item`, use `boldItem`).
+- Add comments to explain the purpose of different code sections, especially for functions like `highlight` and `returnItemsToDefault`.
+Correctness: 80%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day3/ExercisesXP/ExercisesXPNormal/script4.js
+suggestions for improvement:
+- Add input validation to handle non-numeric or negative radius inputs more robustly.  Currently, it only alerts; better to prevent submission or provide more informative feedback.
+- The code only addresses Exercise 4.  The other exercises are missing.
+Correctness: 80%
+-----

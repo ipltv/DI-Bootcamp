@@ -1,0 +1,7 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week4/Day4/ExercisesXP/script.js
+suggestions for improvement:
+- In `compareToTen`, the ternary operator is concise but could be slightly improved for readability by using separate `resolve` and `reject` calls.  While functional, it's less immediately clear what's happening.
+- Exercise 2 could include error handling, mirroring the style of Exercise 1, even if it's unlikely to fail.  This would provide a more consistent and robust approach.
+- Add comments to each exercise explaining what the code does. This would significantly enhance readability.
+Correctness: 100%
+-----

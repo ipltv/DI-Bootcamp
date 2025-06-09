@@ -1,0 +1,38 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day4/ExercisesXP/scripts/index7.html
+suggestions for improvement:
+- Exercise 1: Add comments explaining predictions for each section (1.2, 2.2, 4.2, 5.2) as instructed.
+- Exercise 1:  The code doesn't explicitly handle the `const` scenarios (1.2, 2.2, 4.2, 5.2).  While the output in the console would show the error, it should be added to the code comments to make it complete.
+- Exercise 7: The exercise asks for a profile picture.  While a placeholder image is used, consider allowing the user to upload or specify their image URL for a more robust solution.
+- Exercise 8 - Part II: The `displayJuice` function should use the `ingredients` array to dynamically create the output string instead of hardcoding the ingredients.
+Correctness: 90%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day4/ExercisesXP/scripts/index8.html
+suggestions for improvement:
+- Exercise 1: The code is missing the predicted values and explanations as comments for each function.
+- Exercise 1:  The code doesn't address the `const` vs. `let` questions in the comments as instructed.
+- Exercise 2: The code is missing the console.log for experiencePoints.
+- Exercise 3: The code is missing the arrow function for checking string type.
+- Exercise 4: The code is missing the one-line arrow function for adding two numbers.
+- Exercise 5: The code is missing the function declaration, function expression, and one-line arrow function for kg to grams conversion, along with the comment explaining the difference between function declaration and function expression.
+- Exercise 6: The code is missing the self-invoking function for the fortune teller and DOM manipulation.
+- Exercise 7: The code is missing the self-invoking function for the welcome message, navbar creation, and DOM manipulation.
+- Exercise 8: Part I is not implemented separately before Part II.  The instructions suggest a separate implementation before combining the inner functions. The code directly jumps to Part II's implementation.
+- Exercise 8: The code should create a navbar in the HTML file as instructed (in Exercise 7 and implicitly in Exercise 8) to better align with the requirements.
+Correctness: 90%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day4/ExercisesXP/scripts/script1.js
+suggestions for improvement:
+- In Exercise 1, add the actual output of the code to the comments.  The answers are correct, but showing the output enhances clarity.
+- Exercise 1's answers for const could be more precise. Instead of 'It will raise a TypeError', specify the exact error message (e.g., 'Assignment to constant variable').
+- In Exercise 7,  specify that the profile picture should be added as an `<img>` tag and should have a `src` attribute pointing to a suitable image URL.  The instructions are vague on this point.
+- Exercise 8, Part II:  The instructions are unclear about how the `displayJuice` function should obtain the array of ingredients. It should explicitly state that `displayJuice` should access the `ingredients` array from the `makeJuice` function's scope (closure).
+Correctness: 90%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day4/ExercisesXP/scripts/script2-6.js
+suggestions for improvement:
+- In Exercise 1, add comments explaining your predictions for each section (1.2, 2.2, 4.2, 5.2) as requested in the instructions.
+- In Exercise 5, the comment explaining the difference between function declaration and function expression could be more precise.  Mention hoisting specifically.
+- In Exercise 7, provide the HTML for the navbar. The instructions mention creating a Navbar in your HTML file, but the code is missing.
+- Exercise 8: Part II should include error handling (e.g., checking if the DOM is available before appending elements) and consider using a more robust method for displaying the juice information instead of directly manipulating the DOM.  Also clarify the instructions for Part II - how should the juice ingredients be shown?
+Correctness: 95%
+-----

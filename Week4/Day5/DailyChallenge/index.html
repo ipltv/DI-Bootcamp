@@ -1,12 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="script.js" defer></script>
 </head>
+
 <body>
-    
+    <form id="userForm">
+        <input type="text" name="userCategory" placeholder="Category..." value="Cat">
+        <input type="submit" value="Fetch GIF">
+    </form>
+    <br>
+    <div id="root"></div>
+    <script>
+        function getURL(tag, rating, API_KEY) {
+            return `https://api.giphy.com/v1/gifs/random?tag=${tag}&rating=${rating}&api_key=${API_KEY}`
+        }
+
+        async function loadKey() {
+            try {
+                const res = await fetch('./giphyAPI.txt');
+                return await res.text();
+            } catch (err) {
+                console.error("Error loading API key:", err);
+                throw err;
+            }
+        }
+
+        async function fetchRandomGif(tag, rating) {
+            try {
+                API_KEY = await loadKey();
+
+                const endpoint = getURL(tag, rating, API_KEY);
+                const res = await fetch(endpoint);
+
+                if (!res.ok) {
+                    throw new Error(`HTTP error! status: ${res.status}`);
+                }
+
+                const data = await res.json();
+                console.log("Fetched Giphy Data:", data);
+                return data;
+            } catch (err) {
+                console.error("Error retrieving data:", err);
+            }
+        }
+
+        async function displayRandomPicture(data) {
+            let div = document.createElement("div");
+            let hr = document.createElement("hr");
+            let br = document.createElement("br");
+            div.appendChild(br);
+            div.appendChild(hr);
+
+            let img = document.createElement("img");
+            img.setAttribute("src", data.data.images.original.url);
+            div.appendChild(img);
+
+            let deleteElementBtn = document.createElement("button");
+            deleteElementBtn.innerText = "Delete image";
+            deleteElementBtn.addEventListener("click", (e) => {
+                e.target.parentElement.remove();
+            })
+            div.appendChild(deleteElementBtn);
+
+            div.appendChild(hr);
+
+            root.appendChild(div);
+        }
+
+        const form = document.getElementById("userForm");
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const category = form.userCategory.value.trim();
+            if (!category) {
+                alert("Please enter a category.");
+                return;
+            }
+            const submitButton = form.querySelector('input[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.innerText = "Fetching...";
+
+            const gifData = await fetchRandomGif(category, 'r');
+            if (gifData) {
+                displayRandomPicture(gifData);
+            }
+            submitButton.disabled = false;
+            submitButton.innerText = "Fetch GIF";
+        })
+
+        let deleteAllBtn = document.createElement("button");
+        deleteAllBtn.innerText = "Delete All";
+        deleteAllBtn.addEventListener("click", () => {
+            document.getElementById("root").replaceChildren();
+        })
+        const br = document.querySelector("form");
+        br.insertAdjacentElement("afterend", deleteAllBtn);
+    </script>
 </body>
+
 </html>

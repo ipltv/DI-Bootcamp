@@ -1,0 +1,9 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week4/Day5/DailyChallenge/index.html
+suggestions for improvement:
+- The API key should not be stored in a separate file; instead use environment variables or a more secure method.  Consider using a `.env` file and a library like `dotenv` to manage environment variables.
+- Error handling could be improved; provide more user-friendly messages instead of just console errors. For example, display an error message to the user if the API request fails.
+- Improve code readability by using more descriptive variable names (e.g., instead of `res`, use `response`).
+- Add a loading indicator during API calls to improve user experience. The current implementation only disables the button, a visual loading indicator would be better.
+- The `getURL` function could be made more flexible by allowing optional parameters instead of hardcoding the rating. Consider adding input for rating as well.
+Correctness: 95%
+-----

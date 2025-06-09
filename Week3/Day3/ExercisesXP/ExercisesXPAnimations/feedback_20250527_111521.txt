@@ -1,0 +1,33 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day3/ExercisesXP/ExercisesXPAnimations/index1.html
+suggestions for improvement:
+- Exercise 1, Part I and II are correctly implemented.  However, Part III is incomplete. The code doesn't implement the clearInterval functionality based on the number of paragraphs. It only clears the interval when the button is clicked.
+- Exercise 2 is not provided, therefore it cannot be assessed.
+- Add comments to explain the logic in each part of the code, especially the `setInterval` and `clearInterval` functions.
+- Use more descriptive variable names. For example, instead of just 'p', use 'newParagraph'.
+Correctness: 70%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day3/ExercisesXP/ExercisesXPAnimations/index2.html
+suggestions for improvement:
+- Exercise 1 is missing.  The provided HTML and the JSON response only address Exercise 2.
+- In Exercise 2, the animation is not smooth.  Moving 1px every millisecond is inefficient and may cause performance issues. A larger time interval and smoother animation technique is recommended.
+- Error handling is absent.  The code should gracefully handle potential errors (e.g., the `animate` div not being found).
+- The code should be better organized into functions to improve readability and maintainability.
+- Add comments explaining the purpose of different sections of the code.
+Correctness: 80%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day3/ExercisesXP/ExercisesXPAnimations/script1.js
+suggestions for improvement:
+- Improve the function `addPtoDiv` to accept the text content as a parameter for better reusability.
+- Add error handling for the case where the element with id 'container' or 'clear' is not found.
+- In Exercise 2, the provided code is missing.  The response should include the code for Exercise 2 to be evaluated.
+- Add comments explaining the purpose of each section of code, especially for the `setInterval` logic in Exercise 1.
+Correctness: 90%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day3/ExercisesXP/ExercisesXPAnimations/script2.js
+suggestions for improvement:
+- The code for Exercise 1 is missing.  The provided code only addresses Exercise 2.
+- Error handling could be improved.  While the code prevents multiple intervals from running simultaneously, it doesn't handle potential errors like `parseInt` failing if the element's style is not properly set.
+- The performance could be improved by using `requestAnimationFrame` instead of `setInterval` for smoother animation.
+- Add comments explaining the purpose of each section of code, especially the calculations within the `setInterval` callback.
+Correctness: 95%
+-----

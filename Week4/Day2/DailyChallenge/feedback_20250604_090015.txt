@@ -1,0 +1,8 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week4/Day2/DailyChallenge/script.js
+suggestions for improvement:
+- The code could be improved by adding input validation to the `Video` constructor to handle potential errors (e.g., non-string titles or uploaders, non-numeric time).
+- Consider adding error handling for cases where the videoData array might be empty or contain invalid data.
+- The variable name `videos` is slightly redundant as it's an array of `Video` objects. A more descriptive name might be `videoInstances` or `videoList`.
+- While the loop correctly instantiates the Video objects, a more concise approach using `map()` could improve readability.
+Correctness: 95%
+-----

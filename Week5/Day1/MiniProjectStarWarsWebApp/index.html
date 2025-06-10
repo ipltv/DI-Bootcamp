@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <style>
         body {
             margin: 0;
@@ -13,19 +14,45 @@
             background-repeat: repeat;
             height: 100vh;
         }
-        main{
+
+        main {
             margin: 0 auto;
             padding: 1%;
             width: 70%;
             text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
         }
-        #content{
+
+        #content {
             border: 5px solid yellow;
             border-radius: 10px;
-            height: 40vh;
+            min-height: 30vh;
+        }
+
+        button {
+            background-color: white;
+            border: 5px solid yellow;
+            border-radius: 10px;
+            font-size: 3vh;
+            margin-top: 2vh;
+        }
+
+        .big-white-icon {
+            color: white;
+            font-size: 48px;
+        }
+
+        .loading-p {
+            color: white;
+            font-size: 48px;
+            margin: 2vh;
+        }
+
+        h2,
+        p {
+            color: white;
         }
     </style>
-    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -34,6 +61,85 @@
         <section id="content"></section>
         <button id="findButton">Find Someone</button>
     </main>
+    <script>
+        function getRandomCharacterURL() {
+            return `https://www.swapi.tech/api/people/${Math.floor(Math.random() * 83) + 1}`;
+        }
+
+        async function swapi(url) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error("Request is not succsessful.");
+                }
+                let data = await response.json()
+                return data;
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        function displayLoadingFiller() {
+            const iElement = document.createElement("i");
+            iElement.classList.add("fa-solid", "fa-spinner", "fa-spin-pulse", "big-white-icon");
+
+            const pElement = document.createElement("p");
+            pElement.innerText = "Loading...";
+            pElement.classList.add("loading-p");
+            contentSection.replaceChildren(iElement, pElement);
+        }
+
+        function removeDisplayedData() {
+            contentSection.replaceChildren();
+        }
+
+        function displayLoadedData(dataCharacter, dataHomeworld) {
+            removeDisplayedData();
+            const propertiesList = { "Height": "height", "Gender": "gender", "Birth Year": "birth_year" };
+
+            const h2NameElement = document.createElement("h2");
+            h2NameElement.innerText = dataCharacter.result.properties.name;
+            contentSection.appendChild(h2NameElement);
+
+
+            for (let property in propertiesList) {
+                const pElement = document.createElement("p");
+                pElement.innerText = property + ": " + dataCharacter.result.properties[propertiesList[property]];
+                contentSection.appendChild(pElement);
+            }
+
+            const pHomeworldElement = document.createElement("p");
+            pHomeworldElement.innerText = "Home World: " + dataHomeworld.result.properties.name;
+            contentSection.appendChild(pHomeworldElement);
+        }
+
+        function displayErrorMessage() {
+            removeDisplayedData();
+            const h2ErrorElement = document.createElement("h2");
+            h2ErrorElement.innerText = "Oh No! That person isnt available.";
+            contentSection.appendChild(h2ErrorElement);
+        }
+
+        const contentSection = document.getElementById("content");
+        document.getElementById("findButton").addEventListener("click", async (e) => {
+            e.target.disabled = true;
+            displayLoadingFiller();
+            try {
+                const characterData = await swapi(getRandomCharacterURL());
+                const homeworldData = await swapi(characterData.result.properties.homeworld);
+                if (!characterData?.result?.properties || !homeworldData?.result?.properties) {
+                    throw new Error("Incomplete data received");
+                }
+                displayLoadedData(characterData, homeworldData);
+            }
+            catch (error) {
+                console.log("An error has occured: ", error);
+                displayErrorMessage();
+            }
+            e.target.disabled = false;
+        }
+        )
+    </script>
 </body>
 
 </html>

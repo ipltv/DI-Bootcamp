@@ -1,0 +1,11 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week5/Day1/DailyChallenge/index.html
+suggestions for improvement:
+- The API key should not be hardcoded directly into the client-side JavaScript code.  Use environment variables or a backend server to handle API keys securely.  The current implementation exposes the API key which is a significant security risk.
+- Add more comprehensive error handling.  Currently, some error messages are generic. Provide more specific feedback to the user based on the type of error encountered (e.g., network error, API error, invalid input).
+- Improve the user interface.  Consider adding visual cues (e.g., loading indicators) during API calls to enhance the user experience.  The current UI is very basic.
+- The code lacks input validation for the `amount` field beyond checking if it's a positive number. It should check against a more comprehensive set of restrictions.
+- Add input validation to ensure the selected currencies are valid and supported by the API before proceeding with the conversion.
+- Consider adding a feature to allow users to save their conversion history.
+- The code could benefit from better separation of concerns and modularity. Refactor the code into smaller, more manageable functions that handle specific tasks.
+Correctness: 95%
+-----

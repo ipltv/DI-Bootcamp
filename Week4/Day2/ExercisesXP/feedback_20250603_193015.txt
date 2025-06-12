@@ -1,0 +1,9 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week4/Day2/ExercisesXP/script.js
+suggestions for improvement:
+- In Exercise 2, adding a space between the first and last names in the returned string would improve readability.  Consider using template literals for better string concatenation.
+- Exercise 6, question 3: The Animal class is correctly implemented. However, adding getter and setter methods for the attributes would make the class more robust and follow better OOP practices.
+- Exercise 6, question 4: The Mammal class extends Animal correctly, and the sound method works as expected.  Adding error handling for cases where the soundPhrase is missing or not defined would improve the robustness of the sound method.
+- Exercise 6, question 5: The farmerCow object is correctly created and the sound method is called.  The output string could benefit from a more descriptive variable to avoid potential confusion for other developers. 
+- In Exercise 5,  comment out the incorrect constructors to clearly show only the correct one is selected.
+Correctness: 95%
+-----

@@ -101,3 +101,12 @@ console.log(describeEmployee(emp3));
 
 
 //  Exercise 7: Type Assertions and Generic Constraints
+
+function formatInput<T extends {toString():string}>(value:T):string{
+    return value.toString();
+}
+
+console.log(formatInput(123));
+console.log(formatInput(true));
+console.log(formatInput(new Date()));
+console.log(formatInput(["a", "b"]));

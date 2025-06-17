@@ -9,8 +9,7 @@ def insertItemByIndex(array, item, index):
 
 my_list = [1, 2, 3, 4]
 new_list = insertItemByIndex(my_list, 99, 2)
-print(new_list)
-# Output: [1, 2, 99, 3, 4]
+print(new_list) #[1, 2, 99, 3, 4]
 
 # Exercise 2
 
@@ -193,25 +192,104 @@ print("Expected: ([1, 2, 3], ['a', 'b'])\n")
 # Exercise 12
 print("------------Exercise 12------------")
 
+def is_palindrome(string_value):
+    i = 0
+    j = len(string_value) - 1
+    flag = True
+    while (i < j and flag):
+        if string_value[i] != string_value[j]:
+            flag = False
+        i += 1
+        j -= 1
+    return flag
 
+print(is_palindrome("radar"))
+print(is_palindrome("John"))
 
 # Exercise 13
 print("------------Exercise 13------------")
 
+def sum_over_k(sentence,k):
+    words = sentence.split()
+    count = 0
+    for word in words:
+        if len(word) > k:
+            count += 1
+    return count
+
+sentence = 'Do or do not there is no try'
+k=2
+print(sum_over_k(sentence,k)) #3
+
 # Exercise 14
 print("------------Exercise 14------------")
+
+def dict_avg(dictionary):
+    total = 0
+    for x in dictionary.values():
+        total += x
+    return total / len(dictionary)
+
+print(dict_avg({'a': 1,'b':2,'c':8,'d': 1}))
 
 # Exercise 15
 print("------------Exercise 15------------")
 
+def common_div(num1, num2):
+    gcd = math.gcd(num1, num2)
+    result = set()
+    for i in range(1, int(gcd**0.5) + 1):
+        if gcd % i == 0:
+            result.add(i)
+            result.add(gcd // i)
+    return sorted(result)
+
+print(common_div(10,20))
+
 # Exercise 16
 print("------------Exercise 16------------")
+
+def is_prime(n):
+    if n <= 1:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    for i in range(3, int(n**0.5) + 1, 2):
+        if n % i == 0:
+            return False
+    return True
+
+print(is_prime(11)) #True
+print(is_prime(6)) #False
 
 # Exercise 17
 print("------------Exercise 17------------")
 
+def weird_print(array):
+    result = []
+    for index, element in enumerate(array):
+        if index % 2 == 0 and element % 2 == 0:
+            result.append(element)
+    print(result)
+
+weird_print([1,2,2,3,4,5]) #[2, 4]
+
 # Exercise 18
 print("------------Exercise 18------------")
+
+def type_count(**kwargs):
+    dictionary = {}
+    for key, value in kwargs.items():
+        value_type = type(value).__name__
+        if value_type not in dictionary:
+            dictionary[value_type] = 1
+        else: 
+            dictionary[value_type] += 1
+    return ", ".join(f"{t}: {count}" for t, count in dictionary.items())
+
+print(type_count(a=1,b='string',c=1.0,d=True,e=False)) #int: 1, str: 1, float: 1, bool: 2
 
 # Exercise 19
 print("------------Exercise 19------------")

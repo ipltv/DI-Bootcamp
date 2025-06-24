@@ -1,0 +1,7 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week5/Day3/DailyChallenge/src/script.ts
+suggestions for improvement:
+- The `getBookDetails` method in the `Library` class can be improved.  Currently, it returns `undefined` if the book is not found, and a string if it is found.  This inconsistent return type is not ideal.  Consider returning a `Book | undefined` which would be more type-safe and easier to handle by the caller.
+- Add error handling or a more informative message in `getBookDetails` when a book isn't found. Currently, it returns `undefined` which might not be user-friendly.
+- The `getBooks` method in the `Library` class creates a shallow copy of the `books` array using the spread syntax.  While functional, it is not explicitly mentioned in the instructions and could be omitted for simplicity.  If keeping it, the comments should explicitly state its intent (returning a copy to avoid modifying the original array).
+Correctness: 95%
+-----

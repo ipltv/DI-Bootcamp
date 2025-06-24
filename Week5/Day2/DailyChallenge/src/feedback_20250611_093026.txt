@@ -1,0 +1,7 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week5/Day2/DailyChallenge/src/script.ts
+suggestions for improvement:
+- The function correctly identifies the type of the input value using `typeof` and checks if it's present in the `allowedTypes` array. However, it has a minor flaw in handling `null`.
+- Consider adding a comment explaining the use of `typeof` and how it interacts with `allowedTypes` for better understanding.
+- While the current implementation is efficient, using a more robust type checking approach or a type guard would improve type safety in the long run.
+Correctness: 90%
+-----

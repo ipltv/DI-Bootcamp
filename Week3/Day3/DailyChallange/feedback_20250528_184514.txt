@@ -1,0 +1,16 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day3/DailyChallange/index.html
+suggestions for improvement:
+- Improve error handling for empty inputs.  Instead of an alert, provide more user-friendly feedback (e.g., highlight empty fields).
+- The shuffle button functionality could be enhanced to provide a truly random story each time, rather than just re-displaying the same story.
+- Add comments to explain the purpose of helper functions like `escapeRegExp` more clearly.
+- Consider using more descriptive variable names (e.g., instead of `userInput`, perhaps `madLibsData`).
+- The code could benefit from a more robust method of checking for empty input fields, possibly using a loop to check each field instead of relying on an alert.
+Correctness: 95%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week3/Day3/DailyChallange/script.js
+suggestions for improvement:
+- The code doesn't handle empty input fields gracefully.  Instead of an alert, it could highlight the empty fields or provide more specific feedback.
+- The shuffle button functionality is partially incomplete. Clicking it re-displays the *same* story, not a different story using the same user input.  The intent is to show different stories from the `templates` array.
+- Add error handling for the case where the `templates` array is empty.
+Correctness: 85%
+-----

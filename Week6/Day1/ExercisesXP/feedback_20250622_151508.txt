@@ -1,0 +1,13 @@
+URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week6/Day1/ExercisesXP/Exercises1.sql
+suggestions for improvement:
+- The database name should be specified explicitly in the `CREATE DATABASE` statement instead of relying on a default.
+- Add comments to explain the purpose of each SQL statement, especially for the INSERT statements.
+- Consider using more descriptive names for columns (e.g., `item_price` instead of `price`).
+- The SQL code could be organized into a single .sql file for better management and to adhere to the instructions in the chapter.
+- The `SERIAL PRIMARY KEY` is good practice and correctly implemented.
+Brief justification:
+- correctness: The code accurately creates the `items` and `customers` tables with the specified columns and data types.  It correctly inserts the data as instructed and executes the SELECT queries to retrieve data based on the given conditions.  The only minor deviation is the lack of explicit database name specification, which, if not addressed, might cause issues depending on the database environment. The functionality directly addresses the exercise outlined in the 'Chapter Content/Questions', specifically 'Retrieve data, Add data'.
+- readability: The code is generally readable. However, adding more comments would improve understanding, especially for the insert statements. More descriptive column names would enhance readability.  The structure, while functional, could be improved by combining all the SQL into a single file. 
+- performance: The SQL queries are efficient for the given dataset size.  There are no obvious performance bottlenecks.
+- security: The code does not include any security vulnerabilities as it's only performing basic database operations.  No sensitive data or insecure practices are involved.
+

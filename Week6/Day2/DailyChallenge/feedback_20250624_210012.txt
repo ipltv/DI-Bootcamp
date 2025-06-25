@@ -1,0 +1,11 @@
+URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week6/Day2/DailyChallenge/daily.sql
+suggestions for improvement:
+- The code is well-structured but could benefit from comments explaining the purpose of each query.  Adding comments will significantly improve readability.
+- For improved performance, especially with larger datasets, consider adding indexes to the 'id' columns of both tables.  This would speed up the `NOT IN` subqueries.
+- While the SQL is secure in this context, it's good practice to sanitize user inputs in a real-world application to prevent SQL injection vulnerabilities. This is not relevant here since the inputs are hardcoded.
+Brief justification:
+- correctness: The code accurately predicts and produces the correct output for all four SQL queries.  The queries directly utilize SQL basics (creation, insertion, selection) and demonstrate understanding of table relationships (specifically, using `NOT IN` to compare values across tables).  This aligns perfectly with the chapter content.
+- readability: The SQL code is generally easy to understand. However, adding comments to each query explaining its purpose would greatly enhance readability.  The output predictions are clearly marked and easy to follow.
+- performance: The performance is acceptable for small datasets. However, the `NOT IN` clause with subqueries can be inefficient for larger tables. Adding indexes to the 'id' columns in both tables would significantly improve query performance, especially for Q3 and Q4 where the subquery is not filtered.
+- security: Since this example uses hardcoded values and there is no user interaction, SQL injection is not a concern.  However, it's important to note that in a production environment, parameterized queries or prepared statements should be used to prevent potential SQL injection vulnerabilities if the data came from an untrusted source.   The current code does not have any security issues in the context provided.
+

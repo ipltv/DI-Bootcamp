@@ -1,0 +1,22 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week2/Day3/ExercisesXP/ExercisesXP.py
+suggestions for improvement:
+- In the `Currency` class, the `__repr__` method could be simplified to always return the same format as `__str__`.  The conditional is unnecessary.
+- Add docstrings to all functions in Exercise 2, 4, 5, 6 and 7 to improve readability and understanding. 
+- In Exercise 2, the code doesn't explicitly follow the instructions to create separate `func.py` and `exercise_one.py` files.  It's all in one script. 
+- Error handling could be improved in Exercise 6. The program will crash if the user provides an invalid date format.  Consider adding a `try-except` block.
+- Exercise 7 is excellent; the `gen_users` function is clean and effectively uses the `faker` module.
+- In `Currency`'s `__add__` method, explicitly specifying that `other` must be an instance of `Currency` or a number (int/float) adds clarity.
+Correctness: 95%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week2/Day3/ExercisesXP/exercise_one.py
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week2/Day3/ExercisesXP/func.py
+suggestions for improvement:
+- The `Currency` class implementation is missing in the provided code.  Exercise 1 is incomplete.
+- Exercise 2 is partially implemented. The `sum_two_number` function is correctly implemented, but the instructions also required creating `exercise_one.py` to import and use this function.
+- Exercises 3, 4, 5, 6, and 7 are entirely missing. The code only includes a solution for a part of Exercise 2.
+Correctness: 80%
+-----

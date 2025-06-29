@@ -1,0 +1,11 @@
+URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week6/Day1/DailyChallenge/DailyChallenge.sql
+suggestions for improvement:
+- The code should include error handling for the `INSERT` statements to gracefully handle potential constraint violations.  Instead of just showing the error message, the code could log the error or provide a more user-friendly message.
+- Add comments explaining the purpose of each SQL statement for better understanding.
+- Consider using parameterized queries to prevent SQL injection vulnerabilities, although this is less of a concern with direct SQL statements in a controlled environment.
+Brief justification:
+- correctness: The SQL code directly addresses the instructions in the Chapter Content/Questions. It correctly counts the actors using `SELECT COUNT(*) FROM actors;`.  It attempts to add actors with blank fields, demonstrating the expected outcome (constraint violation), as specified in the instructions. The score is not 100% because error handling is missing in the provided code.  The chapter asks what the outcome will be of adding a new actor with blank fields; the code demonstrates this outcome.  However, a more robust solution would include handling that outcome more gracefully. 
+- readability: The SQL code is clear, concise, and easy to understand. The statements are straightforward and well-formatted.
+- performance: The SQL statements are efficient for their intended purpose. The `COUNT(*)` operation is highly optimized in most database systems, and the `INSERT` statements are standard SQL syntax.
+- security: There are no immediate security concerns in this particular code snippet.  However, in a real-world application, parameterized queries should be used to prevent SQL injection vulnerabilities (although the risk here is low given the context).
+

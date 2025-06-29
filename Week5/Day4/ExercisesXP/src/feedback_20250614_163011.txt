@@ -1,0 +1,6 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week5/Day4/ExercisesXP/src/script.ts
+suggestions for improvement:
+- In Exercise 4, the `getFirstElement` function could be improved by directly returning the element as a string using a type assertion instead of using a conditional statement.  This improves readability and conciseness.  The current implementation unnecessarily converts numbers to strings, although it technically fulfills the prompt requirements.
+- In Exercise 1,  while functionally correct, adding a `houseNumber` property to the `Address` type is not explicitly stated in the instructions.  The prompt only specifies `city` and `street`.
+Correctness: 95%
+-----

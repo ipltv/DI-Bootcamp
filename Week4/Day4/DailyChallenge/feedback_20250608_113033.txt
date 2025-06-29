@@ -1,0 +1,9 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week4/Day4/DailyChallenge/script.js
+suggestions for improvement:
+- In `makeAllCaps`, the `instanceof String` check is redundant; `typeof x === "string"` suffices.
+- Improve error messages in both `makeAllCaps` and `sortWords` to be more informative (e.g., specifying which element caused the rejection).
+- Add input validation in `toMorse` to handle null or empty user input.
+- In `toMorse`, consider using `try...catch` instead of immediately rejecting the promise for better error handling;  you can then reject with a more descriptive error message.
+- The `joinWords` function directly manipulates the DOM.  For better separation of concerns, consider returning the joined string and letting the calling function handle DOM manipulation.
+Correctness: 95%
+-----

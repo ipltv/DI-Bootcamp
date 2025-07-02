@@ -1,0 +1,8 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week5/Day1/MiniProjectStarWarsWebApp/index.html
+suggestions for improvement:
+- Improve error handling to provide more specific error messages to the user, instead of just a generic 'Oh No! That person isnt available.'  Consider handling network errors separately from data errors.
+- Add more robust input validation, although the current API call is relatively safe.
+- The CSS could be improved for better responsiveness and maintainability. Consider using a CSS framework or preprocessor.
+- Consider using a loading indicator that is more visually appealing than just a spinning icon and text.  There are many libraries that provide more sophisticated loading animations.
+Correctness: 95%
+-----

@@ -1,0 +1,9 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week6/Day3/DailyChallengeTablesRelationships/daily.sql
+suggestions for improvement:
+- In the Customer and Customer_profile tables, consider using a more descriptive naming convention for the foreign key column. Instead of `customer_id` in `Customer_profile`,  `customer_fk_id` would be clearer and more consistent with the naming in Part II.
+- Add indexes to foreign key columns in `Customer_profile` and `Library` tables for improved query performance.  Specifically add indexes to `customer_fk_id` in `Customer_profile` and `book_fk_id` and `student_fk_id` in `Library`.
+- The comments explaining the SQL queries and the effect of the `DELETE` statement are good practice.  Consider adding comments to the `INSERT` statements as well, explaining the purpose and what data is being inserted.
+- The last query in Part I  calculates the number of customers that are not logged in.  While correct, it can be slightly simplified by removing the `OR cp.isLoggedIn IS NULL` part, as the `LEFT JOIN` already handles the cases where there's no matching profile. The `WHERE cp.isLoggedIn != true` is sufficient.
+- For better readability, especially in larger projects, consider using aliases for your table names within the queries (e.g., `SELECT c.first_name FROM Customer c ...`).  This is already done in parts of the code, but can be applied more consistently. 
+Correctness: 95%
+-----

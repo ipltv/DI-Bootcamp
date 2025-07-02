@@ -1,0 +1,6 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week5/Day4/DailyChallenge/src/script.ts
+suggestions for improvement:
+- The use of a switch statement is excellent for readability and maintainability in this case.  Consider adding a comment to the `_exhaustiveCheck` to explain its purpose of preventing exhaustive type checking errors more explicitly.
+- The function could be slightly improved by adding error handling for cases where the input array is empty or contains null or undefined values.  For example, you could add a check at the beginning to return an empty array if the input is empty or `undefined`, and handle `null` values appropriately.
+Correctness: 100%
+-----

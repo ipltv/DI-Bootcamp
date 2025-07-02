@@ -5,3 +5,7 @@ Week4/Day5/DailyChallenge/giphyAPI.txt
 Week5/Day1/DailyChallenge/config.js
 Week5/Day2/ExercisesXP/index.html
 Week5/Day2/ExercisesXP/script.js
+**/node_modules
+**/package-lock.json
+Week6/Day4/ExerciseXP/package.json
+Week6/Day4/ExerciseXP/todoApp/package.json

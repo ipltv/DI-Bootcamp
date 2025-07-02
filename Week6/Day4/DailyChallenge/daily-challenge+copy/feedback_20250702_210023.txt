@@ -1,0 +1,35 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week6/Day4/DailyChallenge/daily-challenge+copy/app.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week6/Day4/DailyChallenge/daily-challenge+copy/app2.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week6/Day4/DailyChallenge/daily-challenge+copy/app3.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week6/Day4/DailyChallenge/daily-challenge+copy/challenge.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week6/Day4/DailyChallenge/daily-challenge+copy/colorful-message.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week6/Day4/DailyChallenge/daily-challenge+copy/greeting.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week6/Day4/DailyChallenge/daily-challenge+copy/read-file.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----

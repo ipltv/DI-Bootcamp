@@ -1,0 +1,7 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week4/Day1/ExercisesXP/script.js
+suggestions for improvement:
+- In Exercise 2, the ternary operator can be simplified using an array lookup or a more concise conditional approach.  The current nested ternary is a bit hard to read.
+- In Exercise 6,  the bonus part uses the original `students` array in the forEach loop instead of the filtered `passedStudents` array. This is inefficient and might lead to unexpected results if the filter criteria changes. Use the `passedStudents` array in the forEach loop for better clarity and efficiency.
+- Add comments to explain the purpose of each section of code, especially for more complex operations like the ternary in Exercise 2.
+Correctness: 95%
+-----

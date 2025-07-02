@@ -1,0 +1,19 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week6/Day3/ExerciseXP/Exercise1.sql
+suggestions for improvement:
+- Add comments to explain the purpose of each SQL statement, especially for more complex queries.
+- Consider using more descriptive names for tables and columns (e.g., instead of `id`, use `film_id` or `review_id`).
+- For improved readability, format the SQL queries to enhance visual clarity (e.g., proper indentation and line breaks).
+- While the `ON DELETE CASCADE` constraint is used correctly, add explicit error handling or checks to handle potential issues during data deletion.
+- Implement input validation to prevent SQL injection vulnerabilities when adding new films or reviews.
+- The `last_update` column in `customer_review` table could be updated automatically using triggers to improve data consistency. 
+Correctness: 95%
+-----
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week6/Day3/ExerciseXP/Exercise2.sql
+suggestions for improvement:
+- The queries for finding the friend's movies could be improved by using more efficient joins and potentially adding error handling for cases where no matching films are found.
+- Add comments explaining the logic behind the more complex queries to improve readability.
+- The performance could be improved by adding indexes to frequently queried columns (like film_id, customer_id, return_date) for faster lookups.
+- Consider using parameterized queries instead of directly embedding values in SQL strings to prevent SQL injection vulnerabilities (though not directly relevant to this exercise, it's good practice).
+- For the queries that search using text (like '%boat%'), consider using full-text search for better performance and relevance (if the database supports it).
+Correctness: 90%
+-----

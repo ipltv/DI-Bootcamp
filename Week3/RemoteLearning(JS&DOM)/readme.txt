@@ -1,0 +1,1 @@
+You can find Exercise 1: Timer and Exercise 2 : Move the box in Week 3 => Day 3 => ExercisesXP => ExercisesXPAnimationтщвуnode

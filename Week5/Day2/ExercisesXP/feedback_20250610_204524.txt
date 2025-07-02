@@ -1,0 +1,8 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week5/Day2/ExercisesXP/script.ts
+suggestions for improvement:
+- In Exercise 7, add a test to ensure that the element with id "textElement" exists before attempting to access it.  Currently, it will throw an error if the element isn't found in the DOM.
+- Improve variable naming in Exercise 1 and 2 (messageString, nameString) to be more concise and descriptive (e.g., message, name).
+- Exercise 9 could benefit from a more robust handling of potential errors, such as invalid input types for the overloaded function.
+- Add comments to explain the purpose of the overloaded function in Exercise 9, and why it is structured the way it is.
+Correctness: 95%
+-----

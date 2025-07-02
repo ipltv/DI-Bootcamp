@@ -1,0 +1,9 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week5/Day3/ExercisesXP/src/script.ts
+suggestions for improvement:
+- In `Employee`, consider adding a getter for `salary` if you need controlled access to it instead of making it completely private.  Directly exposing `position` as public might not always be ideal depending on the application's security needs.
+- Add input validation to the `Product` constructor to prevent invalid data such as negative prices or non-numeric IDs.
+- The `Animal` class could benefit from a constructor to initialize the `name` property. Currently, it relies on the subclass to do it.
+- For better error handling, the `Calculator` class could check for invalid inputs (like non-numeric values) and throw appropriate exceptions or return null/undefined instead of silently producing incorrect results. Consider adding a static property to track the number of times the methods are called, if you need to.
+- The `printUserDetails` function could be more robust by handling the case where `membershipLevel` is undefined more gracefully (e.g., displaying 'Not specified' instead of just an empty string).
+Correctness: 95%
+-----

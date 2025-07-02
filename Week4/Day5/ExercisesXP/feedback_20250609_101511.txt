@@ -1,0 +1,12 @@
+URL: URL: https://github.com/ipltv/DI-Bootcamp/blob/main/Week4/Day5/ExercisesXP/script.js
+suggestions for improvement:
+- Improve error handling: Provide more specific error messages to the user, instead of just logging them to the console.  For example, in Exercise 1, if the API key is invalid or the network is unreachable, provide a user-friendly message.
+- Enhance API key management: Storing the API key directly in the code is a security risk. Explore more secure methods, such as environment variables or a dedicated configuration file.
+- Add input validation: Validate the inputs to the `retrieveData` function (query, startingPosition, rating, limit) to prevent unexpected behavior or errors. For example, ensure `startingPosition` and `limit` are non-negative numbers.
+- Improve function naming:  Use more descriptive function names. For example, instead of `swapi()`, use a more descriptive name like `fetchStarshipData()`.
+- Modularize code: Break down larger functions into smaller, more manageable ones, improving readability and maintainability.  The `retrieveData` function is quite long and could benefit from this.
+- Handle potential `null` or `undefined` responses: Check for null or undefined values before accessing properties of returned data objects. This prevents unexpected errors.
+- Document the code: Add comments to explain the purpose of different parts of the code and the logic used.
+- Use `const` and `let` appropriately: Use `const` for variables that don't change, and `let` only for variables that require reassignment.
+Correctness: 95%
+-----

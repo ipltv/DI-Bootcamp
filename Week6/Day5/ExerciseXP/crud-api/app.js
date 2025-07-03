@@ -9,7 +9,7 @@ app.get('/api/external-posts', async (req, res) => {
     const posts = await fetchPosts();
     res.json(posts);
     console.log("Posts has been loaded successfully.");
-    // console.log(posts);
+    console.log(posts);
     
   } catch (error) {
     console.error('Error fetching posts:', error.message);

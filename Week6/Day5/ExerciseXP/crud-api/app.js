@@ -7,7 +7,7 @@ const PORT = 5000;
 app.get('/api/external-posts', async (req, res) => {
   try {
     const posts = await fetchPosts();
-    res.json(posts);
+    res.json(posts);      
     console.log("Posts has been loaded successfully.");
     console.log(posts);
     

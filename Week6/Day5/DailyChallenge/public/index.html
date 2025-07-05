@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer async></script>
+</head>
+
+<body>
+    <div id="messageBox" class="hidden"></div>
+    <form id="gameForm">
+        <p id="questionParagraph"></p>
+        <input type="radio" name="quizOptions" id="opt1"><label for="opt1" id="opt1Label"></label><br>
+        <input type="radio" name="quizOptions" id="opt2"><label for="opt2" id="opt2Label"></label><br>
+        <input type="radio" name="quizOptions" id="opt3"><label for="opt3" id="opt3Label"></label><br>
+        <input type="radio" name="quizOptions" id="opt4"><label for="opt4" id="opt4Label"></label><br>
+        <input type="submit">
+    </form>
+    <div>Your score: <span id="score"></span></div>
+    <label for="playerNameInput">Input your name:</label>
+    <input id="playerNameInput" type="text"><button id="submitNameBtn">Send to Leaderboard</button>
+</body>
+
+</html>

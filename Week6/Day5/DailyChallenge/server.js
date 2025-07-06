@@ -3,7 +3,74 @@ import session from 'express-session';
 import dotenv from 'dotenv';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import { emojis } from "./data.js";
+
+const emojis = [
+    { emoji: '😀', name: 'Smile' },
+    { emoji: '😂', name: 'Laugh' },
+    { emoji: '😭', name: 'Crying' },
+    { emoji: '😡', name: 'Angry' },
+    { emoji: '😴', name: 'Sleepy' },
+    { emoji: '🤔', name: 'Thinking' },
+    { emoji: '😍', name: 'Love' },
+    { emoji: '😎', name: 'Cool' },
+    { emoji: '🥶', name: 'Cold' },
+    { emoji: '😱', name: 'Scared' },
+
+    { emoji: '🐶', name: 'Dog' },
+    { emoji: '🐱', name: 'Cat' },
+    { emoji: '🐭', name: 'Mouse' },
+    { emoji: '🐰', name: 'Rabbit' },
+    { emoji: '🦊', name: 'Fox' },
+    { emoji: '🐼', name: 'Panda' },
+    { emoji: '🐸', name: 'Frog' },
+    { emoji: '🐵', name: 'Monkey' },
+    { emoji: '🐷', name: 'Pig' },
+    { emoji: '🦁', name: 'Lion' },
+
+    { emoji: '🌮', name: 'Taco' },
+    { emoji: '🍕', name: 'Pizza' },
+    { emoji: '🍔', name: 'Burger' },
+    { emoji: '🍣', name: 'Sushi' },
+    { emoji: '🍩', name: 'Donut' },
+    { emoji: '🍎', name: 'Apple' },
+    { emoji: '🍌', name: 'Banana' },
+    { emoji: '🍓', name: 'Strawberry' },
+    { emoji: '🥦', name: 'Broccoli' },
+    { emoji: '🥚', name: 'Egg' },
+
+    { emoji: '🚗', name: 'Car' },
+    { emoji: '✈️', name: 'Airplane' },
+    { emoji: '🚀', name: 'Rocket' },
+    { emoji: '🚌', name: 'Bus' },
+    { emoji: '🚲', name: 'Bicycle' },
+    { emoji: '🚂', name: 'Train' },
+    { emoji: '🚁', name: 'Helicopter' },
+    { emoji: '🛳️', name: 'Ship' },
+    { emoji: '🏍️', name: 'Motorcycle' },
+    { emoji: '🚜', name: 'Tractor' },
+
+    { emoji: '🎉', name: 'Party' },
+    { emoji: '🎵', name: 'Music' },
+    { emoji: '🎨', name: 'Art' },
+    { emoji: '📚', name: 'Books' },
+    { emoji: '💡', name: 'Idea' },
+    { emoji: '🕹️', name: 'Game' },
+    { emoji: '📷', name: 'Camera' },
+    { emoji: '🎬', name: 'Movie' },
+    { emoji: '🧩', name: 'Puzzle' },
+    { emoji: '🎮', name: 'Console' },
+
+    { emoji: '🌍', name: 'Earth' },
+    { emoji: '☀️', name: 'Sun' },
+    { emoji: '🌧️', name: 'Rain' },
+    { emoji: '⛄', name: 'Snowman' },
+    { emoji: '🌈', name: 'Rainbow' },
+    { emoji: '🔥', name: 'Fire' },
+    { emoji: '💧', name: 'Water' },
+    { emoji: '🍁', name: 'Leaf' },
+    { emoji: '🌙', name: 'Moon' },
+    { emoji: '⚡', name: 'Lightning' }
+];
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -73,7 +140,6 @@ app.post('/submit', (req, res) => {
 
     const correctAnswer = req.session.correctAnswer;
     const userAnswer = req.body.answer;
-    console.log(req.body);
 
     if (userAnswer === correctAnswer) {
         req.session.score = (req.session.score || 0) + 1;
@@ -84,8 +150,7 @@ app.post('/submit', (req, res) => {
 });
 
 /** C(rud) - POST /submit-name - save player's name and score to the leaderboard */
-app.post('/submit-name', (req, res) => {
-    console.log(req.body);
+app.post('/submit-name', (req, res) => {;
     if (req.body === undefined || !('playerName' in req.body)) {
         return res.status(400).send({ error: "Request should contain 'playerName' field." });
     };

@@ -92,7 +92,12 @@ const updateUserById = async (req, res) => {
     try {
         const { id } = req.params;
         const { email, username, first_name, last_name, password } = req.body;
-        if (!email || !username || !first_name || !last_name || isNaN(id)) {
+        
+        const parsedId = parseInt(id, 10);
+        if (isNaN(parsedId)) {
+            return res.status(400).json({ msg: "ID should be a valid number." });
+        }
+        if (!email || !username || !first_name || !last_name) {
             res.status(400).json({ msg: "Request should contain numeric 'id', and non-empty 'email', 'username', 'first_name' and 'last_name' fields." });
             return;
         }

@@ -1,0 +1,15 @@
+<div class="row">
+  <% posts.forEach(function(post) { %>
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5><a href="<%= post.url %>" target="_blank"><%= post.title %></a></h5>
+          <p><strong>Date:</strong> <%= post.date %></p>
+          <p><strong>Creator:</strong> <%= post.creator %></p>
+          <p><strong>Category:</strong> <%= post.category %></p>
+          <p><%= post.content %></p>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+</div>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+    <script src="script.js" defer async></script>
+</head>
+
+<body>
+    <h2>Register:</h2>
+    <form id="registerForm">
+        <label for="firstNameField">First Name:</label><input type="text" id="firstNameField" name="firstName" required>
+        <label for="lastNameField">Last Name:</label><input type="text" id="lastNameField" name="lastName" required>
+        <label for="email">Email:</label><input type="email" id="email" name="email" required>
+        <label for="usernameText">Username:</label><input type="text" id="usernameText" name="username" required>
+        <label for="passwordField">Password:</label><input type="password" id="passwordField" name="password" required>
+        <div></div><input type="submit" value="Submit">
+    </form>
+    <p id="response"></p>
+    <a href="/login">Go To Login page</a>
+</body>
+
+</html>

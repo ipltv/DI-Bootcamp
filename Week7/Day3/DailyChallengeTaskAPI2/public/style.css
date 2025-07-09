@@ -1,0 +1,23 @@
+form {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 10px 15px;
+    max-width: 400px;
+    margin: 20px;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.visible{
+    visibility: visible;
+}
+
+.error{
+    color: red;
+}
+
+.ok{
+    color: darkgreen;
+}

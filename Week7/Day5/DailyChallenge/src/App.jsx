@@ -12,9 +12,8 @@ function App() {
   ])
 
   const handleVote = (index) => {
-    const newLangs = [...languages];
-    newLangs[index].votes += 1;
-    setLanguages(newLangs);
+    languages[index].votes++;
+    setLanguages([...languages]);
   }
 
   return (

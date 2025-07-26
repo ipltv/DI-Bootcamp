@@ -10,7 +10,6 @@ const plannerSlice = createSlice({
     initialState,
     reducers: {
         setSelectedDate(state, action) {
-            console.log(`reducer setSelectedDate => state.selectedDate: ${state.selectedDate}; payload: ${action.payload}`);
             state.selectedDate = action.payload;
         },
         addTask(state, action) {

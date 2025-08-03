@@ -24,6 +24,9 @@ export class RecipeCollection {
         if (Array.isArray(parsed)) {
             this.recipes = parsed;
         }
+        else {
+            throw new Error("Invalid local storage state.")
+        }
     }
     getAllRecipes(): Recipe[] {
         return [...this.recipes];
